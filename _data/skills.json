@@ -40,6 +40,6 @@
   },
   {
     "name": "Tools",
-    "list": ["bash", "git", "gitkraken", "latex", "linux", "sphinx", "vscode"]
+    "list": ["bash", "git", "gitkraken", "latex", "linux", "postman", "sphinx", "vscode"]
   }
 ]

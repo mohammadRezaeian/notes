@@ -5,7 +5,7 @@ description: Note of word embedding in NLP
 tags: [NLP]
 toc: true
 math: true
-icon: "/img_src/cats/nlp.svg"
+icon: "/img/cats/nlp.svg"
 notfull: 1
 keywords: "word2vec tool framework tensorflow One-hot encodings vectorize text vectorization dense sparse matrix"
 ---

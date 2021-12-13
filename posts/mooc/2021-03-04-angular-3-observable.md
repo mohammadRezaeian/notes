@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular 3 - Observable"
+title: "MOOC: Angular 3 - Observable"
 tags: ["MOOC", "JavaScript", "Angular"]
 toc: true
 icon: angular.svg

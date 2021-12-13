@@ -3,7 +3,7 @@ layout: post
 title: "Sphinx & reStructuredText & docstring"
 tags: [Python]
 toc: true
-icon: "/img_src/about/sphinx.svg"
+icon: "/img/about/sphinx.svg"
 notfull: 1
 keywords: "documentation sphinx napoleon google style numpy style ReadTheDocs rst reStructuredText autodoc class theme docstrings docstring __doc__ help sphinx numpydoc formats"
 ---

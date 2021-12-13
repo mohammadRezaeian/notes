@@ -5,21 +5,61 @@ tags: [Others, Collection]
 toc: false
 icon: tips.svg
 notfull: 1
-keywords: "download flash video browser extension video url google video download manager videoplay developer tools exclude files folders search technique skills patterns preference settings confige configure options remove apps google apps bit.ly cortana uses chrome instead of edge default browser windows 10 change default directory powershell cmder github readme localhost split mp3 audio audacity youtube video tracks brave cursor"
-date: 2021-10-19
+keywords: "download flash video browser extension video url google video download manager videoplay developer tools exclude files folders search technique skills patterns preference settings confige configure options remove apps google apps bit.ly cortana uses chrome instead of edge default browser windows 10 change default directory powershell cmder github readme localhost split mp3 audio audacity youtube video tracks brave cursor shortcut chromium base inspect elements developer tools keyboards"
+date: 2021-11-20
 ---
 
 {% assign img-url = '/img/post/others' %}
 
+
+
+::: hsbox Keep light mode for Chrome on MacOS
+
+Using below command and don't forget to restart Chrome.
+
+```bash
+defaults write com.google.Chrome NSRequiresAquaSystemAppearance -bool YES
+```
+
+:::
+
+
+
+::: hsbox Change keyboard shortcut for Dev Tools of Chromium browsers
+
+We cannot change directly in the browser.
+
+- **Native**: In the *Settings* page of Dev Tools, click on "*Experiments*", search for "key" and tick "Enable keyboard shortcut editor". Reload the Dev Tools and click on "*Shortcuts*", you will see the edit button on right of each shortcut.
+
+- (Another way) **On Mac**, we can add the custom by going to *System Preferences* > *Keyboard* > *App Shortcuts* > "+" > Choose the app (eg. "Google Chrome.app") > Type **exactly** the name of commands, eg "Inspect elements".
+
+:::
+
+
+
+::: hsbox Connect localhost of another computer from this computer
+
+On the "host" computer, use `ifconfig` (linux, macos) or `ipconfig` (windows) to know the ip address (something like `192.168.1.109`). From the "client" computer, browser `http://192.168.1.109:4000` (make sure on the "host", `localhost:4000` is working).
+
+:::
+
 ::: hsbox Change default directory in [cmder](https://cmder.net/)
 1. Go to settings
+
 2. Then, Startup > Tasks
+
 3. Choose `{cmd::Cmder}`
+
 4. Choose the below-right box, let the cursor at the end of the text
+
 5. Click on "Startup dir…"
+
 6. Choose your desired directory > OK
+
 7. Remove the current line with the new appearing one (`new_console:d:%USERPROFILE%`)
+
 8. Click on Save settings
+
 :::
 
 ::: hsbox Disable navigation by cursor on Brave (cursor showing up in the window at all times)
@@ -31,6 +71,7 @@ Toggle [[F7]].
 - Download and install [this app](https://github.com/da2x/EdgeDeflector/releases) (reinstall it after every update of Windows).
 - Choose **EdgeDeflector** as the default web browser if it asks.
 - Install [this extension](https://chrome.google.com/webstore/detail/chrometana-redirect-bing/) in Chrome to force to redirect from **Bing** to **Google Search Engine**.
+
 :::
 
 
@@ -53,6 +94,7 @@ Cannot open a page with security problem.
 2. "Query HSTS/PKP domain", fill domain, e.g. `gitlab.powerop.io`.
 3. "Delete domain security policies", fill domain and click on __Delete__.
 4. Try again > Click on "Advanced" > Click on ...unsafe....
+
 :::
 
 ::: hsbox Download flash video
@@ -86,4 +128,5 @@ It's useful if you [download mp3 audio from a youtube video](https://y2mate.guru
    2. Using [[cmd]] + [[B]] to "Add label at selection"
    3. Name for labels: Whenever a label is created, a small rectangle box appear next to the label point, click there to name the label.
    4. After adding all necessary labels, File > Export > Export Multiple > Split file based on "Labels" (tick on "Include audio before the first label) > "Name file" (should choose "Using Label/Track Name") option and then "Export".
+
 :::

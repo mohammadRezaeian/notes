@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular 4 - Forms"
+title: "MOOC: Angular 4 - Forms"
 tags: ["MOOC", "JavaScript", "Angular"]
 toc: true
 icon: angular.svg
@@ -10,6 +10,8 @@ keywords: "mooc course fundamental installation 101 typescript ts service loggin
 {% assign img-url = '/img/post/angular' %}
 
 This is my note for the course "[Angular - The Complete Guide (2021 Edition)](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/13914134#overview)" which is taught by Maximilian Schwarzmüller on Udemy. This is an incredible course for you to start to learn Angular from basic. The official Angular docs is good but it's not for the beginner.
+
+👉 Note: [Forms in Angular](/angular-form/)
 
 🍄 **PART 1** — [Angular  1 - Basics & Components & Databinding & Directives](/angular-1-basics-components-databinding-directives/)
 🍄 **PART 2** — [Angular 2 - Services & Dependency Injection & Routing](/angular-2-service-dependency-injection-routing/)
@@ -103,7 +105,7 @@ We can actually see what users entered.
 
 ```jsx
 // app.component.ts
-onSubmit(form: HTMLFormElement) {
+onSubmit(form: NgForm) {
 	console.log(form);
 	// Get the values user entered: form.value
 }

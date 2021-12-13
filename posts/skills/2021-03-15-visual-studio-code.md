@@ -4,8 +4,8 @@ title: "VSCode"
 tags: [Skills]
 toc: true
 icon: vsc.png
-keywords: "visual studio code vsc regex regular expression ssh remote server character combining font ligatures couple characters symbols letters new characters installation install extension plugin add extra path to auto complete reStructuredText rst markdown extension pythonremote regular expression regex vscode live server scss css compiler"
-date: 2021-10-28
+keywords: "visual studio code vsc regex regular expression ssh remote server character combining font ligatures couple characters symbols letters new characters installation install extension plugin add extra path to auto complete reStructuredText rst markdown extension pythonremote regular expression regex vscode live server scss css compiler autopep8 formatter"
+date: 2021-11-02
 ---
 
 ## Install
@@ -155,7 +155,7 @@ content
 {% endraw %}
 ```
 
-## Exlude files/folders in file search Visual Studio Code (VSC)
+## Exlude files/folders in search results
 
 Go to **Preferences** > **Settings** > search `exclude` and modify inside section `Search: Exclude`. More patterns can be found [here](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options).
 
@@ -188,8 +188,10 @@ Read [this tutorial](https://code.visualstudio.com/blogs/2019/07/25/remote-ssh).
 
 ### Error?
 
-``` bash
-# Could not establish connection to "undefined". Could not resolve hostname.
+::: hsbox Could not establish connection to "undefined". Could not resolve hostname.
+
+```bash
+# 
 # ref: https://github.com/microsoft/vscode-remote-release/issues/1047
 
 # Open config ssh file
@@ -212,6 +214,18 @@ IdentityFile ~/.ssh/id
 # Pick "server_name"
 ```
 
+:::
+
+::: hsbox `autopep8` formatter not working?
+
+I don't what I've done to make it work again, just try:
+
+1. Re-initialize the formmater => You have to make VSCode ask you again about the formatter > choose an interpreter > install again `autopep8`
+2. Re-install `autopep8` (`pip uninstall autopep8` then `pip install autopep8`)
+3. Reload the window each try.
+
+:::
+
 
 ## Settings
 
@@ -228,6 +242,80 @@ Use settings for a custom file extension,
     "editor.wordWrap": "on",
 }
 ```
+
+### Work with multiple workspace
+
+💡A tip to work with ==different workspace in the same screen== (Because it's difficult to distinguish "quickly" between opened windows) => **change color scheme for each workspace**!
+
+In the current workspace > Go to "*Preferences*" > *Settings* > Click on tab "*Workspace*" > *Workbench* > *Appearance* > *Color Theme*.
+
+### Snippets
+
+💡 **Why need?** Quickly add a long snippet of text (with suggestion) with several keywords. For example, I add `###Thi console.log()` when debugging codes in JS. Then, I search the whole project for the line  `console.log()` that I forgot to delete.
+
+**How?** Open *Preferences* > *User Snippets* > either you create a global file or type and find a good format (for example, type "markdown" and create snippets for this format only).
+
+```bash
+# Only available to js and typescript files
+# Usage: type "logt" to add 
+# /*###Thi*/ console.log(...);
+"[JS] Print to console": {
+  "scope": "javascript,typescript",
+  "prefix": "logt",
+  "body": "/*###Thi*/ console.log('$1');",
+  "description": "Log output to console"
+},
+```
+
+**Note**: In order for snippets ==working with markdown file==, you have to add below settings (VSCode's `settings.json`)
+
+```json
+"[markdown]": {
+  "editor.quickSuggestions": true
+}
+```
+
+::: hsbox Some of my snippets
+
+```bash
+"[JS] Print to console": {
+    "scope": "javascript,typescript",
+    "prefix": "logt",
+    "body": "/*###Thi*/ console.log('$1');",
+    "description": "Log output to console"
+  },
+  "[JS] Point a debugger": {
+    "scope": "javascript,typescript",
+    "prefix": "deb",
+    "body": "/*###Thi*/ debugger;",
+    "description": "Make a debugger point here"
+  },
+  "[JS] TODO": {
+    "scope": "javascript,typescript",
+    "prefix": "todo",
+    "body": "/*###TODO: */",
+    "description": "Create a todo."
+  },
+  "[JS] Thi": {
+    "scope": "javascript,typescript",
+    "prefix": "thi",
+    "body": "/*###Thi*/",
+    "description": "Test of Thi, remove later!"
+  },
+  "[JS] Back Logger Debug": {
+    "scope": "javascript,typescript",
+    "prefix": "logger",
+    "body": "Logger.debug('$1'); /*###Thi*/",
+    "description": "Log debug output on back"
+  },
+  "[MD] Details": {
+    "prefix": "detail",
+    "body": "<details>\n<summary>$1</summary>\n\n$2\n</details>",
+    "description": "Details"
+  }
+```
+
+:::
 
 ## Pylint
 

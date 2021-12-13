@@ -1,11 +1,12 @@
 ---
 layout: post
 title: "NodeJS & NPM"
-tags: [JavaScript]
+tags: [Web Dev, Backend]
 toc: true
 icon: nodejs.png
-notefull: 1
-keywords: js javascript package management Node Package Manager
+notfull: 1
+keywords: "js javascript package management Node Manager npm nvm node nodejs yarn js cli env environment"
+date: 2021-11-16
 ---
 
 {% assign img-url = '/img/post/js/gatsby' %}
@@ -18,6 +19,10 @@ First, need to [install nvm](https://github.com/nvm-sh/nvm). Run the line of `cu
 
 ::: warning
 Below commands are mostly for Linux/MacOS users.
+:::
+
+::: danger
+**For Mac M1**: You may encouter error `Target architecture arm64 is only supported on arm64 and x64 host` when installing NodeJS version <= 14 with `nvm`. Just open Terminal using Rosetta (right click on Terminal.app > Get info > tick "Open using Rosetta") and then run the installation command again. 💡 **Tip**: You can create a separated **Terminal Rosetta.app** just in case you wanna install something using Rosetta.
 :::
 
 ::: col-2-equal
@@ -138,11 +143,12 @@ npm install express@4.16.1
 npm install /path/to/package
 ```
 
-``` bash
-# from github repository
-npm i git+https://github.com/abc/xyz.git # https
-# or
-npm i git+ssh://git@github.com/abc/xyz.git # ssh
+``` js
+// from github repository
+npm i git+https://github.com/abc/xyz.git // https
+npm i git+https://<github repo>#<new_commit_hash> // a specific commit
+// or
+npm i git+ssh://git@github.com/abc/xyz.git // ssh
 ```
 
 ``` bash
@@ -219,3 +225,29 @@ npm i --save npm-run-all
 }
 ```
 :::
+
+## Console.log things
+
+Sometimes, we wanna log the results for debugging, but it appears `[Object]` (for example) all time.
+
+```js
+import { inspect } from 'util';
+console.log(inspect(
+  myObject,
+  {
+    showHidden: false,
+    depth: null,
+    colors: true
+  }
+));
+
+// One line
+console.log(inspect(myObject, {showHidden: false, depth: null, colors: true}))
+```
+
+```js
+// Without module
+const util = require('util')
+console.log(util.inspect(myObject, {showHidden: false, depth: null, colors: true}));
+```
+

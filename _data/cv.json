@@ -1,12 +1,11 @@
 [
   {
     "name": "Experiences",
-    "icon": "exp.svg",
     "list": [
       {
         "where": "Ideta",
-        "bgwhite": true,
-        "logo": "ideta.png",
+        "bgwhite": false,
+        "logo": "ideta-single.png",
         "url": "https://www.ideta.io",
         "title": "Web Developer & Data Scientist",
         "date": "2021 — ongoing",
@@ -26,6 +25,7 @@
           "mongodb",
           "nestjs",
           "nodejs",
+          "postman",
           "python",
           "rxjs",
           "scikit-learn",
@@ -70,7 +70,7 @@
         "date": "2013 — current",
         "activity": [
           "Math2IT is a Vietnamese math, education, and technology community. We write about intuitive math and technology that help Vietnamese learn these subjects easily.",
-          "I write about math and technology in an intuitive way. I am also an administrator of a community about mathematics and technology on Facebook."
+          "I write about math and technology in an intuitive way. I am also an administrator of <a href='https://www.facebook.com/groups/math2it' target='_blank'>a community</a> about mathematics and technology on Facebook."
         ],
         "tech": [
           "bootstrap",
@@ -100,7 +100,7 @@
         "title": "Researcher in Applied Maths & Coder",
         "date": "2013 — 2018",
         "activity": [
-          "I have studied the growth of biofilms using the Finite Element Method, a numerical method of analysis. The title of the dissertation is \"Finite Element Methods for Nonlinear Interface Problems. Application to a bioﬁlmic growth model\". For the implementation I used FreeFem++ and the self-made NXFEM toolbox."
+          "I have studied the growth of biofilms using the Finite Element Method, a numerical method of analysis. The title of <a href='https://www.theses.fr/2018USPCD083' target='_blank'>the dissertation</a> is \"<i>Finite Element Methods for Nonlinear Interface Problems. Application to a bioﬁlmic growth model</i>\". For the implementation I used FreeFem++ and a self-made NXFEM toolbox written in Matlab."
         ],
         "tech": ["freefempp", "bash", "git", "linux", "matlab", "python"]
       }
@@ -108,7 +108,6 @@
   },
   {
     "name": "Education",
-    "icon": "education.svg",
     "list": [
       {
         "where": "Self-learning",
@@ -145,7 +144,7 @@
         "title": "Doctor in Applied Maths",
         "date": "2013 — 2018",
         "activity": [
-          "I have studied the growth of biofilms using the Finite Element Method, a numerical method of analysis. The title of the dissertation is \"Finite Element Methods for Nonlinear Interface Problems. Application to a bioﬁlmic growth model\". For the implementation I used FreeFem++ and the self-made NXFEM toolbox."
+          "I have studied the growth of biofilms using the Finite Element Method, a numerical method of analysis. The title of <a href='https://www.theses.fr/2018USPCD083' target='_blank'>the dissertation</a> is \"<i>Finite Element Methods for Nonlinear Interface Problems. Application to a bioﬁlmic growth model</i>\". For the implementation I used FreeFem++ and a self-made NXFEM toolbox written in Matlab."
         ]
       },
       {

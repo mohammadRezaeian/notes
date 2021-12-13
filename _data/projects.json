@@ -25,7 +25,7 @@
   {
     "title": "Mountain vs Beach Classifier",
     "description": "A small project to create a classifier: mountain vs beach.",
-    "source": "https://github.com/dinhanhthi/eleventy-elasticlunr-js",
+    "source": "https://github.com/dinhanhthi/mountain-vs-beach",
     "icon": "🏖",
     "tech": ["bootstrap", "html5", "js", "scss", "tensorflow"]
   },
@@ -124,7 +124,6 @@
     "title": "math2it.com",
     "icon": "🔥",
     "description": "A Vietnamese website for intuitive knowledge (math, education and technology).",
-    "source": "https://github.com/dinhanhthi/math2itwp",
     "url": "http://math2it.com",
     "tech": ["latex"],
     "tech_text": ["maths", "IT", "tutorial"]

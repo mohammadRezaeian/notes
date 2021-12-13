@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular 2 - Services & DI & Routing"
+title: "MOOC: Angular 2 - Services & DI & Routing"
 tags: ["MOOC", "JavaScript", "Angular"]
 toc: true
 icon: angular.svg
@@ -159,7 +159,7 @@ Inject a service to father → all its child component get the same instance of 
 
     ```jsx
     // service B
-
+    
     // service A
     @Injectable()
     export class ServiceA {

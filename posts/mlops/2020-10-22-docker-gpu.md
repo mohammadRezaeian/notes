@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Docker + GPUs"
-tags: [MLOps, Docker]
+tags: [MLOps, Docker, Backend]
 toc: true
 icon: docker.svg
 keywords: "pybash tania rascia CI CD continuous integration deployment pipeline docker idea how to use airflow kubernetes k8s k apache container images dangling images vscode vsc visual studio code ssh container env environnement file variable nvidia docker runtime gpus tensorflow torch"

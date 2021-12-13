@@ -1,16 +1,16 @@
 ---
 layout: post
 title: "Bash"
-tags: [Skills, Linux]
+tags: [Skills, Linux, Terminal]
 toc: true
 icon: terminal.svg
-keywords: "cmder cmd terminal powershell macos mac linux ubuntu windows vim editor download wget check ip permission administrator block compress file zip rar unzip RAM CPU printenv environmental variables alias quick command quick shortcut multiple commands and script bash print print tree folder files structure windows terminal sh file"
+date: 2021-11-07
+keywords: "cmder cmd terminal powershell macos mac linux ubuntu windows vim editor download wget check ip permission administrator block compress file zip rar unzip RAM CPU printenv environmental variables alias quick command quick shortcut multiple commands and script bash print print tree folder files structure windows terminal sh file kill running port"
 ---
 
 Bash commands are mainly supported in MacOS, Linux but also support in Windows. You can use integrated tools for using bash on these platforms.
 
-👉 Note: [Terminals](/terminal/).
-👉 Note: [Bash screen](/screen/).
+:point_right: [Other terminal notes](/tags/terminal/).
 
 ## Tools
 
@@ -34,6 +34,10 @@ command_1 && command_2
 ~~~
 
 ## `.sh` file
+
+::: info
+💡 `#!/bin/bash` tells your terminal to run the script with `bash`. There are also `zsh`, `sh`, `fish`,...
+:::
 
 <div class="col-2-equal">
 
@@ -311,6 +315,11 @@ netstat -lepunt
 kill <pid> # eg. kill 29231
 ```
 
+```bash
+# Kill a port
+kill $(lsof -t -i:4000)
+```
+
 ``` bash
 # mb data used
 sudo apt install vnstat
@@ -379,9 +388,10 @@ eog image_file.jpg
 ## Symbolic link (shortcut)
 
 ``` bash
+# Create
 ln -s original_folder sym_folder
 
-# remove
+# Remove
 rm sym_folder
 ```
 
@@ -389,8 +399,7 @@ rm sym_folder
 
 Create your own "alias" command for short,
 
-<div class="col-2-equal">
-
+::: col-2-equal
 ~~~ bash
 # CREATE
 alias yourAlias='cd /usr/'
@@ -412,7 +421,7 @@ alias abc # "abs" stands for what?
 # remove an alias
 unalias abc
 ```
-</div>
+:::
 
 ``` bash
 # group of commands
@@ -421,6 +430,7 @@ my_alias() {
 }
 ```
 
+::: col-2-equal
 ``` bash
 # list of commands
 my_alias(){
@@ -431,10 +441,33 @@ my_alias(){
 }
 ```
 
-{:.noindent}
+```bash
+# With parameter
+alias testing="echo $1"
+# Run as `testing abc`
+
+my_alias() {
+  cd thi/
+  echo $1
+}
+```
+:::
+
+```bash
+# Used as `check_samples "api"` or just `check_samples`
+check_samples() {
+  if [ ! -z $1 ]; then # If there is parameter
+    python scripts/check_samples.py | grep $1
+  else # If there is no parameter
+    python scripts/check_samples.py
+  fi
+}
+```
+
+::: hsbox More options
 - **Linux** / **MacOS**: Add your alias to `.bash_aliases` (in home dir, `printenv HOME`) if you wanna store your alias permanently.
 - **Windows**: Using [cmder](https://cmder.net/) (its [setting file](/files/cmderSetting.xml)), add more aliases to `<cmder-install>/config/user_aliases.cmd`. You can also add (automatically) on the cmder UI, it adds them for you to the `.cmd` file.
-
+:::
 
 ## Create / Copy / Cut / Paste
 

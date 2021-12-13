@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "WSL 2 on Windows"
-tags: [MLOps, Windows, Docker]
+tags: [MLOps, Windows, Docker, Backend, Terminal]
 toc: true
 icon: docker.svg
 keywords: "wsl wsl2 windows subsystem linux windows terminal zsh oh my szh jekyll ruby bundle vscode"

@@ -42,7 +42,7 @@
   },
   {
     "title": "Favorite Github repositories",
-    "url": "https://github.com/dinhanhthi?tab=repositories",
+    "url": "https://github.com/dinhanhthi?tab=stars",
     "tags": ["Others", "Collection", "Resources"],
     "notfull": false,
     "keywords": "repository github git collection awesome list data science web dev resources machine learning deep learning tensorflow open source"

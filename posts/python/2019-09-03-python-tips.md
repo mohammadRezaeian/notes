@@ -3,7 +3,7 @@ layout: post
 title: "Python discrete note"
 tags: [Python]
 toc: true
-icon: "/img_src/about/python.svg"
+icon: "/img/about/python.svg"
 keywords: "python tips swap 2 variables huyen chip clear variable __name__ __main__ __future__ reset del delete variable system reset confirmation elif else if inside lambda function"
 ---
 

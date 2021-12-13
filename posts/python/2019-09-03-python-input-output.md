@@ -3,7 +3,7 @@ layout: post
 title: "Python: Input & Output"
 tags: [Python]
 toc: true
-icon: "/img_src/about/python.svg"
+icon: "/img/about/python.svg"
 keywords: "print string display long strings long texts break the line word wrap multi lines multilines display decimal numbers display dataframes log logging warning info error alert docstring comment multiline comments documentation class definition sample structure example"
 ---
 

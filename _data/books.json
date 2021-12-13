@@ -1,21 +1,33 @@
 [
   {
+    "title": "Series \"You don't know JS Yet\"",
+    "author": "Kyle Simpson",
+    "goodreads": "https://www.goodreads.com/book/show/30296087-you-don-t-know-js",
+    "reading": true
+  },
+  {
+    "title": "Clean Code : A Handbook of Agile Software Craftsmanship",
+    "author": "Robert C. Martin",
+    "goodreads": "https://www.goodreads.com/book/show/3735293-clean-code",
+    "reading": true
+  },
+  {
+    "title": "The Miracles of the Namiya General Store",
+    "author": "Keigo Higashino",
+    "goodreads": "https://www.goodreads.com/review/show/2429857630"
+  },
+  {
     "title": "Naoko",
     "author": "Keigo Higashino",
-    "goodreads": "https://www.goodreads.com/book/show/201271.Naoko",
-    "reading": true
+    "goodreads": "https://www.goodreads.com/review/show/4309194096",
+    "mychoice": 1
   },
   {
     "title": "The Devotion of Suspect X (Detective Galileo #3)",
     "author": "Keigo Higashino",
     "goodreads": "https://www.goodreads.com/review/show/4296678039?book_show_action=false&from_review_page=1"
   },
-  {
-    "title": "Series \"You don't know JS Yet\"",
-    "author": "Kyle Simpson",
-    "goodreads": "https://www.goodreads.com/book/show/30296087-you-don-t-know-js",
-    "reading": true
-  },
+
   {
     "title": "Freakonomics",
     "author": "Steven D. Levitt, Stephen J. Dubner",
@@ -26,12 +38,6 @@
     "author": "Zijin Chen",
     "goodreads": "https://www.goodreads.com/author/show/15009264.Zijin_Chen",
     "intro": "(Vietnamese version) Người truy tìm dấu vết, Tội lỗi không chứng cứ, Vụ trả thù hoàn hảo, Đứa trẻ hư, Đêm trường tâm tối, Mưu sát, Người phát ngôn của thần chết."
-  },
-  {
-    "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and Tensorflow: Concepts, Tools, and Techniques to Build Intelligent Systems",
-    "author": "Aurélien Géron",
-    "goodreads": "https://www.goodreads.com/book/show/40363665-hands-on-machine-learning-with-scikit-learn-keras-and-tensorflow",
-    "reading": true
   },
   {
     "title": "Factfulness: Ten Reasons We're Wrong About the World – and Why Things Are Better Than You Think",

@@ -3,7 +3,7 @@ layout: post
 title: "Python Tuple"
 tags: [Python]
 toc: false
-icon: "/img_src/about/python.svg"
+icon: "/img/about/python.svg"
 notfull: 1
 keywords: ""
 ---

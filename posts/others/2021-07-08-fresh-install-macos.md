@@ -4,7 +4,8 @@ title: "Fresh MacOS installation"
 tags: [Others, Fresh Installation, MacOS, Collection]
 toc: true
 icon: macos.svg
-keywords: "install new macbook setting up applications command line zsh terminal nodejs python brew shortcut cask nodejs node zsh oh-my-zsh xcode"
+date: 2021-11-05
+keywords: "install new macbook setting up applications command line zsh terminal nodejs python brew shortcut cask nodejs node zsh oh-my-zsh xcode bitwarden XCodes"
 ---
 
 This is my personal list of to-do things for a new Macbook.
@@ -34,7 +35,7 @@ This is my personal list of to-do things for a new Macbook.
 
    1. Should choose "U.S." instead of "U.S. International" because with the latter, we have underline score below special symbols like `"`
    2. For Vietnamese input method, DON'T choose built-in VNese input options. Use ~~[GoTiengViet](https://www.trankynam.com/gotv/)~~ [EVKey](https://evkeyvn.com/) instead (Turn off _Gatekeeper_ before installing by `sudo spctl --master-disable`. Then check by `spctl --status` => should return `assessments disabled`)! (Because there will be unconfortable underline when we type).
-      1. **Note 1**: If you are going to use Bitwarden (a password manager, recommended), it will prevent sometimes the input method to work normally (including GoTiengViet and EVKey). In this case, you have to turn off Bitwarden (or restart it).
+      1. **Note 1**: If you are going to use Bitwarden (a password manager, recommended), it will prevent sometimes the input method to work normally (including GoTiengViet and EVKey). In this case, you have to turn off Bitwarden (or restart it). 👉 **Update 05 Nov 2021**: With MacOS 12.1 Beta, it doesn't have this error anymore!
       2. **Note 2**: EVKey works better than GoTiengViet (and it's still maintained) in some cases, for example, when you wanna type "thử nghiệm" on the browser address bar, GoTiengViet gives "thuử nghiệm" instead.
 
 3. **More keyboard settings**:
@@ -167,6 +168,7 @@ This is my personal list of to-do things for a new Macbook.
     - **The Unarchiver**
     - **Word** and **Powerpoint** (in Office 365 suit, paid). You can buy a lifetime license on ebay (not your own email but you can integrate yours later).
     - **Yomu** -- ebook reader.
+    - **Vectornator** -- illustration, vector graphic design. A free alternative to Adobe Illustrator or Affinity Designer.
 
 19. **Terminal**
 
@@ -199,10 +201,10 @@ This is my personal list of to-do things for a new Macbook.
       echo $SHELL # should returns /bin/zsh
       # Check zsh version
       zsh --version
-
+    
       # install oh-my-zsh
       sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
+    
       # install spaceship theme
       git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
       ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
@@ -212,7 +214,7 @@ This is my personal list of to-do things for a new Macbook.
       # Download (then open and install) font Source Code Pro:
       # https://github.com/powerline/fonts/blob/master/SourceCodePro/Source%20Code%20Pro%20for%20Powerline.otf
       # Open iTerm2 Preferences > Profile > Text > change font!
-
+    
       # If you wanna see the changes
       source ~/.zshrc
       ```

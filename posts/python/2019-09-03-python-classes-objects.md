@@ -2,7 +2,7 @@
 layout: post
 title: "Python Classes & Objects"
 tags: [Python]
-icon: "/img_src/about/python.svg"
+icon: "/img/about/python.svg"
 toc: true
 keywords: "classes vs objects methods instances blueprint attributes import local class empty file __init__.py ValueError: attempted relative import beyond top-level package same folder subfolder another folder from incldue get and access attributes of a class abstract class method super father child son Syntactic sugar easier to read why self Syntactic sugar"
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "Python Functions"
 tags: [Python]
 toc: true
-icon: "/img_src/about/python.svg"
+icon: "/img/about/python.svg"
 keywords: "function def Unpacking a function Functions with stars kwargs args rargs lambda function check input verify raise error should we check the arguments type decorators @ notation at wrapper"
 ---
 

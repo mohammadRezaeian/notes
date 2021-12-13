@@ -3,7 +3,7 @@ layout: post
 title: "Regular Expression in Python"
 tags: [Python]
 toc: true
-icon: "/img_src/about/python.svg"
+icon: "/img/about/python.svg"
 notfull: 1
 keywords: special characters
 ---

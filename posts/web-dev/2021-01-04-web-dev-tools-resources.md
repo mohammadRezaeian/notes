@@ -3,7 +3,7 @@ layout: post
 title: "Web Dev tools & resources"
 tags: [Web Dev, Collection, Resources]
 toc: true
-icon: "/img_src/cats/web-dev.svg"
+icon: "/img/cats/web-dev.svg"
 keywords: "tool resources learning application framework repository gihub package plugins extensions font ligatures useful tools frameworks javascript frameworks library plugins extensions dev tools"
 ---
 

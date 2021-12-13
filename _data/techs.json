@@ -180,6 +180,12 @@
     "url": "https://www.php.net/"
   },
   {
+    "id": "postman",
+    "name": "Postman",
+    "icon": "postman.svg",
+    "url": "https://www.getpostman.com/"
+  },
+  {
     "id": "python",
     "name": "Python",
     "icon": "python.svg",

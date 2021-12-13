@@ -3,7 +3,7 @@ layout: post
 title: "Python Loop"
 tags: [Python]
 toc: false
-icon: "/img_src/about/python.svg"
+icon: "/img/about/python.svg"
 keywords: "python for while loop iteration skip ignore some iteration loop"
 ---
 
