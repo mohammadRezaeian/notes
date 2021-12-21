@@ -4,8 +4,8 @@ title: "Fresh MacOS installation"
 tags: [Others, Fresh Installation, MacOS, Collection]
 toc: true
 icon: macos.svg
-date: 2021-11-05
-keywords: "install new macbook setting up applications command line zsh terminal nodejs python brew shortcut cask nodejs node zsh oh-my-zsh xcode bitwarden XCodes"
+date: 2021-12-17
+keywords: "install new macbook setting up applications command line zsh terminal nodejs python brew shortcut cask nodejs node zsh oh-my-zsh xcode bitwarden XCodes dark mode"
 ---
 
 This is my personal list of to-do things for a new Macbook.
@@ -19,12 +19,12 @@ This is my personal list of to-do things for a new Macbook.
    ```bash
    # Current version of MacOSX
    sw_vers -productVersion
-
+   
    # Check if XCode Command Line Tools is installed
    xcode-select --install
    # Should return "/usr/bin/xcrun"
    # If there is any problem, try to install XCode from App Store!
-
+   
    # check if running on ARM or Intel
    arch
    # arm64 -> ARM
@@ -51,22 +51,28 @@ This is my personal list of to-do things for a new Macbook.
       ```
 
 4. Map top-left keyboard to backslash/tilde symbols. Install [Karabiner-Elements](https://karabiner-elements.pqrs.org/) and setting up "non_us_backslash" to "grave_accent_and_tilde (`)". If you don't know the names of some keys, you can use installed Karabiner Viewer.
+
 5. Three fingers to drag (choose texts): **System Preferences** > **Accessibility** > **Pointer Control** > **Trackpad Options...** > Enable dragging (three fingers drag).
+
 6. Install [AltTab](https://alt-tab-macos.netlify.app/) (and use [[⌘]] + [[⇥]] which replaces the default method on mac, be careful!!!) to switch between windows (instead of apps) like on Windows/Linux: `brew install --cask alt-tab`. Open its preferences (We wanna show windows only on the screen containing the cursor):
    - General > tick on "Start at login".
    - Controls > Show windows from: "Screen showing AltTab" (on the 3rd option).
    - Appearance > Show on "Screen including mouse".
+
 7. **For external keyboard K380**: Download and install [Logitech Options](https://www.logitech.com/en-us/product/options). Install this to use [[F]] keys by default. **Remark**: Don't open Bitwarden while using K380, otherwise, it won't work normally (for example, F keys).
+
 8. Enable to install unknown softwares: Sometimes, you cannot install some app from the internet, just go to **System Preferences** > **Security & Privacy** > There will be some warning line at below of "App Store and identified developers", just click "Open anyway"!
    - If you have some issue with `.dmg` file like "resource busy", open **Disk Utility**, then **Images** > **Verify...** > Choose the image file you cannot open then click "Verify"!
+
 9. **Git**: install Gitkraken.
+
 10. (Optional) Install [Hombrew](https://brew.sh/) (missing package control for mac).
 
     ```bash
     # after install, don't forget to add to PATH
     echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> /Users/thi/.zprofile
     eval $(/opt/homebrew/bin/brew shellenv) # refresh
-
+    
     # problem with "old" cask
     # instead of
     brew cask something
@@ -79,14 +85,17 @@ This is my personal list of to-do things for a new Macbook.
     2. For **scanner** app: you can use VueScan (paid) if the current version of app doesn't support chip M1 yet!
     3. For **Canon MG2900** printer/scanner + apps: you may need to download and install drivers from [this site](https://brothersupportdownloads.blogspot.com/2020/06/canon-pixma-mg2900-scanner-driver.html). A backup files are [here](https://mega.nz/file/U0RwBR6T#qa50uOyhlAEiRtrMm_zBkXPtPufJD2Wa1gtbtkw5W_w). You may find other useful drivers for other types of printers on this site also.
     4. **Scanner app**: use **Image Capture** (built-in app on Mac) or install **Canon IJ Scan Utility2**.
+
 12. **Finder**:
     1. Add necessary folder shortcuts to sidebar.
     2. Add recycle Bin to sidebar: [[⇧]] + [[⌘]] + [[.]] to show hidden folders > drag **Bin** folder to sidebar > [[⇧]] + [[⌘]] + [[.]] to hide hidden folders again.
     3. Customize some options in Preferences.
     4. Show status bar: View > Show status bar.
+
 13. Copy files between Linux and MacOS. **Require**: the same wifi network!
     1. **On MacOS**: System Preferences > Sharing > Tick on "File Sharing" > choose "Shared Folders" > on "Everyon", change to "Write & Read".
     2. **On Linux**: Nautilus, click on "Other Locations" > "Networks" > choose the Macbook (and type macos profile password) > choose the shared folders in previous step > Exchange files/folders you want.
+
 14. Disable Resume in Preview and QuickTime Player
 
     ```bash
@@ -119,6 +128,7 @@ This is my personal list of to-do things for a new Macbook.
       3. After installing successfully, open Dictionary app > Preferences... > Tick on the names which are corresponding to the installed/copied dictionaries.
       4. There are built-in LacViet dictionaries but they are not activated yet, don't forget them!
     - **Goldendict**: download installation [here](https://github.com/goldendict/goldendict/wiki/Early-Access-Builds-for-Mac-OS-X) + dictionaries [here](https://drive.google.com/drive/folders/1jna8_grA-wyhPrq8BiB7ypadvW3tTlIv).
+
 17. **External applications**
     - [AppCleaner](https://freemacsoft.net/appcleaner/) -- uninstaller.
     - [Authy](https://authy.com/) -- Two factor authentication (Yes, use it instead of Google Authenticator or others!)
@@ -154,6 +164,7 @@ This is my personal list of to-do things for a new Macbook.
     - [XDM Download Manager](https://sourceforge.net/projects/xdman/files/XDMSetup.dmg/download). [An alternative way](https://brewinstall.org/install-xtreme-download-manager-mac-osx/) to install it via brew.
     - [Youtube Music App](https://ytmusic.app/) for Mac (unofficial)
     - ~~[XtraFinder](https://www.trankynam.com/xtrafinder/) (additional settings for Finder)~~
+
 18. **Appstore**
 
     - **Amphetamine** -- Keep-awake your mac, an alternative to caffein on linux.
@@ -201,10 +212,10 @@ This is my personal list of to-do things for a new Macbook.
       echo $SHELL # should returns /bin/zsh
       # Check zsh version
       zsh --version
-    
+      
       # install oh-my-zsh
       sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    
+      
       # install spaceship theme
       git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
       ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
@@ -214,7 +225,7 @@ This is my personal list of to-do things for a new Macbook.
       # Download (then open and install) font Source Code Pro:
       # https://github.com/powerline/fonts/blob/master/SourceCodePro/Source%20Code%20Pro%20for%20Powerline.otf
       # Open iTerm2 Preferences > Profile > Text > change font!
-    
+      
       # If you wanna see the changes
       source ~/.zshrc
       ```
@@ -260,51 +271,69 @@ This is my personal list of to-do things for a new Macbook.
 
 21. Add gap to Dock (use multiple times)
 
-```
-defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock
-```
+    ``` bash
+    defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock
+    ```
 
-5. 🐞 **Errors**
+22. 🐞 **Errors**
 
-   1. After updating
+    1. After updating
 
-      ```bash
-      defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock
-      ```
+          ```bash
+          defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock
+          ```
 
-      Need to update _Xcode Command-line Tools_:
+          Need to update _Xcode Command-line Tools_:
 
-      ```bash
-      # option 1
-      xcode-select --install
-      # output:
-      xcode-select: note: install requested for command line developer tools
-      ```
+          ```bash
+          # option 1
+          xcode-select --install
+          # output:
+          xcode-select: note: install requested for command line developer tools
+          ```
 
-      ```bash
-      # option 2 (if option 1 doesn't work)
-      # Login + download from webpage
-      https://developer.apple.com/download/more/
-      ```
+          ```bash
+          # option 2 (if option 1 doesn't work)
+          # Login + download from webpage
+          https://developer.apple.com/download/more/
+          ```
 
-   2. **Sidecar**: Using Sidecar feature to turn your ipad to an external screen. It ==works normally with cable== (you have to "trust" from both sides each other). In the case you **cannot use Sidecar via wireless**,
+    2. **Sidecar**: Using Sidecar feature to turn your ipad to an external screen. It ==works normally with cable== (you have to "trust" from both sides each other). In the case you **cannot use Sidecar via wireless**,
 
-      1. Turn on Hardoff on both Mac (in General) and iPad (in General).
-      2. Turn on Bluetooth and Wifi (connect to the same network).
-      3. Turn off file sharing and VPN.
-      4. Reset network setting on your ipad (General > Reset > ...) > restat > connect again to the same network with your Mac > wait 2 minutes > try Sidecar again!
-      5. **Best practice**: Using sidecar via a usb cable! If using wifi, we have latency with mouse cursor!
-      6. For ones who using mac's usb-c port. A direct hub (with an lightning output to charge ipad) may not work (not sufficient power to charge ipad). However, usign another usb-dock and connect to the hub is working fine. Other words,
-         - _Not working_: mac - hub - ipad.
-         - _Working_: mac - hub - usb doc - ipad
+       1. Turn on Hardoff on both Mac (in General) and iPad (in General).
+       2. Turn on Bluetooth and Wifi (connect to the same network).
+       3. Turn off file sharing and VPN.
+       4. Reset network setting on your ipad (General > Reset > ...) > restat > connect again to the same network with your Mac > wait 2 minutes > try Sidecar again!
+       5. **Best practice**: Using sidecar via a usb cable! If using wifi, we have latency with mouse cursor!
+       6. For ones who using mac's usb-c port. A direct hub (with an lightning output to charge ipad) may not work (not sufficient power to charge ipad). However, usign another usb-dock and connect to the hub is working fine. Other words,
+          - _Not working_: mac - hub - ipad.
+          - _Working_: mac - hub - usb doc - ipad
 
-   3. In case of error in installing Application with `App is Damaged Can’t Be Opened`
+    3. In case of error in installing Application with `App is Damaged Can’t Be Opened`
 
-      ```bash
-      xattr -cr /Applications/App_Name.app
-      ```
+       ```bash
+       xattr -cr /Applications/App_Name.app
+       ```
 
-6. **External screens**: I use 2 external screens. However, chip Apple M1 doesn't support more than 1 external one. That's why we need an adapter (having DisplayLink technology) + to install DisplayLink driver for Mac.
+23. **External screens**: I use 2 external screens. However, chip Apple M1 doesn't support more than 1 external one. That's why we need an adapter (having DisplayLink technology) + to install DisplayLink driver for Mac.
 
-   - I use [this adapter](https://www.wavlink.com/en_us/product/WL-UG39DK1_White.html) (Wavlink's USB 3.0 Laptop Docking Station -- WL-UG39DK1) because it's the cheapest one I can find in France.
-   - [DisplayLink driver](https://www.displaylink.com/downloads/macos). Not that, with current version (1.4), [it doesn't support rotating screen](https://support.displaylink.com/knowledgebase/articles/1963276).
+    - I use [this adapter](https://www.wavlink.com/en_us/product/WL-UG39DK1_White.html) (Wavlink's USB 3.0 Laptop Docking Station -- WL-UG39DK1) because it's the cheapest one I can find in France.
+    - [DisplayLink driver](https://www.displaylink.com/downloads/macos). Not that, with current version (1.4), [it doesn't support rotating screen](https://support.displaylink.com/knowledgebase/articles/1963276).
+
+24. Disable dark mode for specific app,
+
+    ```bash
+    # Use spotlight to find the name of the app, eg. "Calendar"
+    # Find the bundle identifier of this app by
+    osascript -e 'id of app "Calendar"'
+    # which returns: com.apple.iCal
+    
+    # Turn off dark mode
+    defaults write com.apple.iCal NSRequiresAquaSystemAppearance -bool Yes
+    # Restore setting
+    defaults write com.apple.iCal NSRequiresAquaSystemAppearance -bool No
+    
+    # Restart the app
+    ```
+
+     
