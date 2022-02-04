@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MOOC: Angular 4 - Forms"
-tags: ["MOOC", "JavaScript", "Angular"]
+tags: [MOOC, Angular]
 toc: true
 icon: angular.svg
 keywords: "mooc course fundamental installation 101 typescript ts service logging user udemy maximilian"

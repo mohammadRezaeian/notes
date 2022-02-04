@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Angular 1 - Basics & Components & Databinding & Directives"
-tags: ["MOOC", "Angular"]
+title: "MOOC: Angular 1 - Basics & Components & Databinding & Directives"
+tags: [MOOC, Angular]
 toc: true
 icon: angular.svg
 keywords: "dynamic components mooc course fundamental installation 101 typescript ts strict mode bootstrap dropdown CLI how it works selector constructor data binding databinding property binding event binding model convention template style ng-template string interpolation core two-way 2-way two way ngModel form listener shared folder debugging sourcemap View Encapsulation Local References ViewChild DOM ng-content Component lifecycle onChanges onInit doCheck AfterView AfterContent Structure Directive ngIf ngFor ngSwitch attribute renderer custom unless ngOnChanges ngOnInit ngDoCheck ngAfterViewinit ngAfterViewChecked ngOnDestroy ngAfterContentInit ngAfterContentChecked"

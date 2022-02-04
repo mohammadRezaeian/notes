@@ -18,8 +18,10 @@
       "jekyll",
       "liquid",
       "nunjucks",
+      "react",
       "rxjs",
       "scss",
+      "tailwindcss",
       "wordpress"
     ]
   },
@@ -31,6 +33,7 @@
       "firebase",
       "graphql",
       "grpc",
+      "google-nodejs-api",
       "jestjs",
       "mongodb",
       "mysql",

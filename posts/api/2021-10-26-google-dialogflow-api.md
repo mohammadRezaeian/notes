@@ -1,31 +1,36 @@
 ---
 layout: post
-title: "Google's Dialogflow APIs"
-tags: [API]
+title: "Google APIs"
+tags: [API, JavaScript]
 toc: true
 icon: dialogflow.svg
-keywords: "apis request http apis application programming interface dialogflow google sdk google cloud gcp apis credentials REST postman gapi gsi sign in with google new version service account endpoint location detect intent roles tokens"
-date: 2021-11-03
+keywords: "apis request http apis application programming interface dialogflow google sdk google cloud gcp apis credentials REST postman gapi gsi sign in with google new version service account endpoint location detect intent roles tokens IAM folder organization projects custom roles principals resource manage service usage"
+date: 2022-01-30
 ---
 
 {% assign img-url = '/img/post/api' %}
 
-Google's documentation is like an ocean. It's not easy to find a right one to start. This note contains only basic things that I've already worked with. Trying your own hand at Google's APIs will help you understand more.
+Google's documentation is like an ocean. It's not easy to find a right one to start. This note contains only basic things that I've already worked with. Try your own hand at Google's APIs will help you understand more.
 
-👉 Github: [dinhanhthi/google-api-playground](https://github.com/dinhanhthi/google-api-playground) (private).
-👉 Note: [Google's OAuth2 APIs](/google-oauth2-api/)
+👉 Github repo: [dinhanhthi/google-api-playground](https://github.com/dinhanhthi/google-api-playground)
+
+::: info
+💡 This note is mainly for Dialogflow APIs. However, I mention also the other services of Google.
+:::
 
 ## Official documentation
 
 {% hsbox "Click to show" %}
 
-1. [APIs & references](https://cloud.google.com/dialogflow/es/docs/reference) -- the root of all things.
-   
-   1. [Node.js client library](https://cloud.google.com/dialogflow/es/docs/reference/libraries/nodejs) -- wanna use in a backend?
-      1. [Dialogflow SDK Client Reference](https://googleapis.dev/nodejs/dialogflow/latest/index.html)
+1. Dialogflow's [APIs & references](https://cloud.google.com/dialogflow/es/docs/reference) -- the root of all things.
+
+   1. [All SDK NodeJS Client References](https://cloud.google.com/nodejs/docs/reference) (beautiful version)
+   1. ~~[Node.js client library](https://cloud.google.com/dialogflow/es/docs/reference/libraries/nodejs)~~ [NodeJS reference](https://cloud.google.com/nodejs/docs/reference/dialogflow/latest/overview) -- wanna use ~~in a backend~~ with NodeJS?
+      1. ~~[Dialogflow SDK Client Reference](https://googleapis.dev/nodejs/dialogflow/latest/index.html)~~ [This one](https://cloud.google.com/nodejs/docs/reference/dialogflow/latest/overview) is more beautiful.
       2. [googleapis/nodejs-dialogflow](https://github.com/googleapis/nodejs-dialogflow) -- Github repo.
          1. [Samples](https://github.com/googleapis/nodejs-dialogflow#samples) -- wanna run these? Step to [this section](#run-samples).
    2. [REST APIs](https://cloud.google.com/dialogflow/docs/reference/rest) -- wanna use `GET`, `POST`,...?
+
 2. [Service endpoint](https://cloud.google.com/dialogflow/es/docs/reference/rest/v2-overview#service-endpoint).
 
     ::: info
@@ -39,15 +44,42 @@ Google's documentation is like an ocean. It's not easy to find a right one to st
     :::
 
 4. [google/google-api-javascript-client](https://github.com/google/google-api-javascript-client) -- aka `gapi`. Github repo.
-5. [Google APIs Explorer](https://developers.google.com/apis-explorer/).
-6. [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/).
+
+5. [Google APIs Explorer](https://developers.google.com/apis-explorer/). (REST)
+
+6. [Google API Node.js Client](https://googleapis.dev/nodejs/googleapis/latest/) (SDK)
+
+7. [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/).
+
 7. [Understand roles](https://cloud.google.com/iam/docs/understanding-roles?authuser=1&_ga=2.35673635.-287242851.1634158283#dialogflow-roles) -- If you decide to create a service account, you will need to assign a role to some users/emails. Each role has different rights to use your data.
 
 {% endhsbox %}
 
+## Some services
+
+- **Dialogflow**: [SDK](https://cloud.google.com/nodejs/docs/reference/dialogflow/latest) ([other official site](https://googleapis.dev/nodejs/dialogflow/latest/v2.AgentsClient.html)) | [REST API](https://cloud.google.com/dialogflow/es/docs/reference/rest/v2-overview)
+- **Manage projects**: [Resource Manager SDK](https://cloud.google.com/nodejs/docs/reference/resource-manager/latest) ([other official site](https://googleapis.dev/nodejs/resource/latest/v3.ProjectsClient.html)) | [REST API](https://cloud.google.com/resource-manager/reference/rest)
+  - **Note**: From version `2.0.0`, [`resource-manager`](https://github.com/googleapis/nodejs-resource-manager/releases) change the package to `@google-cloud/resource-manager`. And from version `3.0,0`, the "folder" was introduced!
+
+- **Active API on some projects**: [Service Usage SDK](https://cloud.google.com/nodejs/docs/reference/service-usage/latest) | [REST API](https://cloud.google.com/service-usage/docs/reference/rest)
+  - **Note**: APIs can only be activated for Projects, neither folder nor organization!
+
+
+::: warning
+
+When you use any NodeJS service, for example,
+
+```jsx
+const client = new library.SampleClient(opts?: ClientOptions);
+```
+
+The `opts` is [described here](https://github.com/googleapis/gax-nodejs/blob/main/client-libraries.md#creating-the-client-instance).
+
+:::
+
 ## Wanna run the Node.js samples?{:#run-samples}
 
-👉 Link of [all samples on github](https://github.com/googleapis/nodejs-dialogflow#samples).
+👉 Link of [all (dialogflow nodejs) samples on github](https://github.com/googleapis/nodejs-dialogflow#samples).
 
 ::: warning
 The old version uses [`dialogflow`](https://www.npmjs.com/package/dialogflow) and [`@type/dialogflow`](https://www.npmjs.com/package/@types/dialogflow). The new version uses only one [`@google-cloud/dialogflow`](https://www.npmjs.com/package/@google-cloud/dialogflow)!
@@ -108,11 +140,27 @@ The example in "Try something outside..." gives us an example of using different
 
 
 ::: warning
-
 On SDK documentation, they don't mention about the location in the `parent` property. For example, they say "`parent` can be `projects/<Project ID or '-'>`", but you can add [the location information](https://cloud.google.com/dialogflow/es/docs/how/region#regions) inside it like that
 
 ```js
-const parent = (location) => "projects/-" + "/locations/" + location; 
+const parent = (location) => "projects/-" + "/locations/" + location;
+```
+
+:::
+
+
+
+::: info
+**You have to enable the Dialogflow API** in the current project. Other wise, we meet below problem.
+
+```bash
+7 PERMISSION_DENIED: Dialogflow API has not been used in project 284022294153 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/dialogflow.googleapis.com/overview?project=284022294153 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+```
+
+You can use [Service Usage](https://cloud.google.com/nodejs/docs/reference/service-usage/latest/service-usage/v1.serviceusageclient#_google_cloud_service_usage_v1_ServiceUsageClient_enableService_member_1_) to enable a service on some project programmatically or go to beflow url to active it visually,
+
+```bash
+https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=<projectId>
 ```
 
 :::
@@ -135,7 +183,7 @@ Google has announced that [they will be discontinuing the Google Sign-In JavaScr
 
 What's this `gapi`? You can use it completely inside an HTML file without using any backend.
 
-👉 [List of samples](https://github.com/google/google-api-javascript-client/tree/master/samples).
+👉 [List of samples](https://github.com/google/google-api-javascript-client/tree/master/samples) (google apis javascript client).
 👉 You have to use [REST API](https://cloud.google.com/dialogflow/es/docs/reference/rest) in this case.
 
 ::: info
@@ -185,7 +233,7 @@ Sometimes, the location infotmation is mentionned in the REST API but not in the
 - **SDK** (the same as the general case), in this, we just need to add "location" into the `agent` property, like
 
   ```js
-  const parent = (location) => "projects/-" + "/locations/" + location; 
+  const parent = (location) => "projects/-" + "/locations/" + location;
   ```
 
 :::
@@ -233,7 +281,7 @@ You will meet an error like below,
 In the SDK documention, they don't mention about the location you need to use in the `agent` property. For example, they say "`parent` can be `projects/<Project ID or '-'>`", but you can add [the location information](https://cloud.google.com/dialogflow/es/docs/how/region#regions) inside it like that
 
 ```js
-const parent = (location) => "projects/-" + "/locations/" + location; 
+const parent = (location) => "projects/-" + "/locations/" + location;
 ```
 
 💡They are the same (for [endpoints](https://cloud.google.com/dialogflow/es/docs/reference/rest/v2-overview#rest_endpoints)):
@@ -245,4 +293,112 @@ global-dialogflow.googleapis.com
 ```
 
 
+
+## Custom roles
+
+👉 [Create here](https://console.cloud.google.com/projectselector2/iam-admin/roles) (then you need to choose a project / a folder / an organization)
+:point_right: [Understanding roles](https://cloud.google.com/iam/docs/understanding-roles).
+
+- If you choose a project, there are some roles cannot be added because they belongs to folders/organization (eg. `resourcemanager.projects.list`)
+- ([ref](https://console.cloud.google.com/cloud-setup/organization?organizationId=247943502148)) You have to pay (using *Google Workspace* or *Google Identity*) to create an organization or a folder.
+
+::: info
+
+💡 **Useful tip**: If you already have a domain, you can try to create a Google Workspace and use it in 1 month of trial. After that, you can deactivate the Google Workspace account but the things on the Google Cloud Platform are still there and the organization you have created in Google Workspace is still working!
+
+:::
+
+In case you wanna some tasks + don't wanna create a custom role (don't forget to check [this list](https://cloud.google.com/iam/docs/understanding-roles)):
+
+::: hsbox Show the list
+
+- **Create a new project**: *Project Creator* (Note: *Owner* doesn't have this role)
+- **Delete a project**: *Project Deleter* (Note: *Owner* doesn't have this role)
+- **Create a new folder**: *Folder Creator* (Note: *Organization Administrator* doesn't have this role, just list the folders and others)
+- **List all projects** / folders: *Organization Administrator*
+- **All Dialogflow tasks**: *Dialogflow API Admin* (it has `dialogflow.*`)
+- Enable/Disable/List services in a project: *Service Usage Admin*
+
+:::
+
+
+
+## Service Account w.r.t Organization / Folder
+
+:point_right: [Create a service account](https://console.cloud.google.com/iam-admin/serviceaccounts/create). (and also the key for it > then download the JSON file)
+
+- By default, a service account can only access to the current project (even if you choose the roles which created in the organization/folder).
+- If you want that service account can perform tasks in the organization/folder, you have to go to **IAM & Admin** > **IAM** > choose the organization / folder (yes, IAM is different for different project/organization/folder) > **ADD** > add the email of the service account to **New principals** and choose a role for it.
+
+
+
+::: hsbox Step by step
+
+1. You have to have a domain and full access to DNS.
+
+2. Try 1 month free [Google Workspace](https://workspace.google.com/) (from this, you will have an organization in [GCP](https://console.cloud.google.com/)).  💡 **TIP**: After 1 month, you deactivate the subsription but the things on GCP witll work!
+
+3. (You may need to activate again the subscription on GCP with a free 300$). Don't worry, just a test, you lose nothing from this amount.
+
+4. Go to [IAM](https://console.cloud.google.com/iam-admin/iam), choose your organization > ADD > paste the admin email of your organization + set roles for it (*Organization Administrator*, *Owner*, *Folder Creator*). Without this step, you cannot create any folder/project.
+
+5. Go to [Cloud Resource Manager](https://console.cloud.google.com/cloud-resource-manager) > Create a new folder inside your organization.
+
+6. Go to [APIs & Services / Credentials](https://console.cloud.google.com/projectselector2/apis/credentials) > Choose a project > Create Credentials > Service Account > Filling the information > Create and continue > Done. **Don't forget to copy the email of this service account** > Click on the link of that SA > Keys > Add key > Create a new key > JSON > Download a JSON file to your computer.
+
+7. Go to IAM again, this time, choose the fodler / organization you want above service account have the right to manage things > Add > Paste the email of the SA you created above > Set roles to it like *Owner, Organization Administrator, Dialogflow API Admin, Project Creator, Project Deleter, Service Usage Admin* (you can check the [list of all roles here](https://cloud.google.com/iam/docs/understanding-roles?_ga=2.200836974.-1507687642.1642666540#predefined_roles)). You can even create your own custom roles.
+
+8. In order to created SA can use Resource Manager API, you have to activate it, otherwise, there will be an error like,
+
+   ```bash
+   7 PERMISSION_DENIED: Cloud Resource Manager API has not been used in project 1023630190150 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=1023630190150 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+   ```
+
+   You either use the link given in the error or using,
+
+   ```bash
+   node -r dotenv/config service-usage/enableService.js 1023630190150 cloudresourcemanager.googleapis.com
+   ```
+
+   to activate the api.
+
+8. One more thing, if you are going to use this SA to manage other APIs on other projects to which it's not belongs, you have to enable that service on the project it belongs to first. (For example, you created this SA on project-A and then you wanna use it to enable some Dialogflow APIs on project-B. You have to enable Dialogflow service on project-A first!)
+
+9. Now, your SA has the full access you want.
+
+10. On your computer, create a file `.env` withe the keys like in `env.example.txt`.
+
+11. You're good!
+
+:::
+
+
+
+::: info
+
+If you use SDK [`listProjectsAsync`](https://googleapis.dev/nodejs/resource/latest/v3.ProjectsClient.html#listProjectsAsync) to list all projects in the organization, you can only list the projects in that organization, not the ones inside a folder even if that folder belongs to the organization.
+
+:::
+
+
+
+::: info
+
+💡 **Quota**: For each Service Account, ==the limit of number of projects you can create is 22==. You can ask more but the better idea is to create another service account (and don't forget to remove the old one with its credentials).
+
+:::
+
+
+
+## Types for TypeScript
+
+::: warning
+The old version uses [`dialogflow`](https://www.npmjs.com/package/dialogflow) and [`@type/dialogflow`](https://www.npmjs.com/package/@types/dialogflow). The new version uses only one [`@google-cloud/dialogflow`](https://www.npmjs.com/package/@google-cloud/dialogflow)!
+:::
+
+For example, the returned type for [`getAgent()`](https://cloud.google.com/nodejs/docs/reference/dialogflow/latest/dialogflow/v2beta1.agentsclient#_google_cloud_dialogflow_v2beta1_AgentsClient_getAgent_member_1_) method can be defined as,
+
+```tsx
+export type Agent = dialogflow.protos.google.cloud.dialogflow.v2.Agent;
+```
 

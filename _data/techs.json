@@ -72,6 +72,12 @@
     "url": "https://www.gitkraken.com/"
   },
   {
+    "id": "google-nodejs-api",
+    "name": "NodeJS API",
+    "icon": "google-nodejs-api.svg",
+    "url": "https://github.com/googleapis/google-api-nodejs-client"
+  },
+  {
     "id": "graphql",
     "name": "GraphQL",
     "icon": "graphql.svg",
@@ -250,6 +256,12 @@
     "name": "TypeScript",
     "icon": "ts.svg",
     "url": "https://www.typescriptlang.org/"
+  },
+  {
+    "id": "tailwindcss",
+    "name": "Tailwind",
+    "icon": "tailwindcss.svg",
+    "url": "https://tailwindcss.com/"
   },
   {
     "id": "vscode",

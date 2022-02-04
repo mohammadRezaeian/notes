@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular 1 - Basics & Components & Databinding & Directives"
+title: "MOOC: Angular 1 - Basics & Components & Databinding & Directives"
 tags: ["MOOC", "Angular"]
 toc: true
 icon: angular.svg

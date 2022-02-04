@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MOOC: Angular 3 - Observable"
-tags: ["MOOC", "JavaScript", "Angular"]
+tags: [MOOC, Angular]
 toc: true
 icon: angular.svg
 keywords: "observable subject eventemitter subscribe rxjs error complete stream subscribe subscription create operations learnrxjs udemy maximilian observer hooks unsubscribe @Output"

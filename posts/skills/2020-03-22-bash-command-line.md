@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "Bash"
-tags: [Skills, Linux, Terminal]
+title: "Bash (Unix Shell)"
+tags: [Skills, Linux, Shell]
 toc: true
 icon: terminal.svg
-date: 2021-11-07
-keywords: "cmder cmd terminal powershell macos mac linux ubuntu windows vim editor download wget check ip permission administrator block compress file zip rar unzip RAM CPU printenv environmental variables alias quick command quick shortcut multiple commands and script bash print print tree folder files structure windows terminal sh file kill running port"
+keywords: "cmder cmd terminal powershell macos mac linux ubuntu windows vim editor download wget check ip permission administrator block compress file zip rar unzip RAM CPU printenv environmental variables alias quick command quick shortcut multiple commands and script bash print print tree folder files structure windows terminal sh file kill running port parent"
+date: 2022-01-25
 ---
 
 Bash commands are mainly supported in MacOS, Linux but also support in Windows. You can use integrated tools for using bash on these platforms.
 
-:point_right: [Other terminal notes](/tags/terminal/).
+:point_right: [Other "Shell" notes](/tags/shell/).
 
 ## Tools
 
@@ -189,7 +189,10 @@ ls | grep 'ubuntu' # files containing 'ubuntu' in name
 
 ~~~ bash
 # CURRENT PATH
-pwd
+pwd # or echo ${pwd}
+
+# PARENT OF CURRENT PATH
+echo $(dirname `pwd`)
 ~~~
 
 ~~~ bash

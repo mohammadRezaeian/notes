@@ -1,5 +1,28 @@
 [
   {
+    "title": "Google APIs Playground",
+    "icon": "🏖",
+    "description": "A playground for Google APIs",
+    "source": "https://github.com/dinhanhthi/google-api-playground",
+    "url": "https://dinhanhthi.com/google-dialogflow-api/",
+    "tech": ["js", "google-nodejs-api"]
+  },
+  {
+    "title": "TEXmath Rebuild",
+    "icon": "🧨 ",
+    "description": "New version of TEXmath. A website about LaTeX and Tech Tutorials. This site is a part of our main project - Math2IT.",
+    "source": "https://github.com/math2it/texmath-gas",
+    "url": "http://texmath.com",
+    "tech": [
+      "gatsby",
+      "js",
+      "react",
+      "tailwindcss",
+      "graphql",
+      "wordpress"
+    ]
+  },
+  {
     "title": "dinhanhthi.com",
     "icon": "⭐",
     "description": "11ty theme. Current version of my personal website.",

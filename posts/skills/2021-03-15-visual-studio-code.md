@@ -5,7 +5,7 @@ tags: [Skills]
 toc: true
 icon: vsc.png
 keywords: "visual studio code vsc regex regular expression ssh remote server character combining font ligatures couple characters symbols letters new characters installation install extension plugin add extra path to auto complete reStructuredText rst markdown extension pythonremote regular expression regex vscode live server scss css compiler autopep8 formatter"
-date: 2021-11-02
+date: 2022-01-31
 ---
 
 ## Install
@@ -64,20 +64,7 @@ Open `settings.json` and add,
 
 ## Appearances
 
-### Change font for internal terminal
-
-Make a good corresponding to [zsh](/terminal#zsh-linux).
-
-``` bash
-# Open settings JSON
-"terminal.integrated.cursorStyle": "line",
-"terminal.integrated.fontFamily": "Source Code Pro Medium",
-"terminal.integrated.fontSize": 18
-
-# on MacOSX
-"terminal.integrated.fontFamily": "Source Code Pro for Powerline",
-"terminal.integrated.fontSize": 16
-```
+👉 Change font for internal terminal? Read [this section](#change-font-for-internal-terminal).
 
 ### Enable font ligatures
 
@@ -351,6 +338,27 @@ Just place before the line like this,
 # pyright: reportMissingImports=false, reportUnusedVariable=warning, reportUntypedBaseClass=error
 import frontmatter
 ```
+
+## Terminal
+
+### Change font for internal terminal
+
+Make a good corresponding to [zsh](/terminal#zsh-linux).
+
+``` bash
+# Open settings JSON
+"terminal.integrated.cursorStyle": "line",
+"terminal.integrated.fontFamily": "Source Code Pro Medium",
+"terminal.integrated.fontSize": 18
+
+# on MacOSX
+"terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+"terminal.integrated.fontSize": 16
+```
+
+### Open Terminal window in the split screen mode
+
+If you wanna open terminal below the 2nd screen in the vertical split screen mode, you can: [[Cmd]] (or [[Ctrl]] on Windows/Linux) + [[Shift]] + [[P]] to open Command Palette > search for "*Terminal: Move Terminal into Editor Area*".
 
 ## Hot keys
 
