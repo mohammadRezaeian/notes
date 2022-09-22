@@ -5,7 +5,7 @@ tags: [Others, Fresh Installation, MacOS, Collection]
 toc: true
 icon: macos.svg
 keywords: "install new macbook setting up applications command line zsh terminal nodejs python brew shortcut cask nodejs node zsh oh-my-zsh xcode bitwarden XCodes dark mode canon printer mg2900"
-date: 2022-05-11
+date: 2022-09-12
 ---
 
 This is my personal list of to-do things for a new Macbook.
@@ -55,11 +55,21 @@ Go to **Keyboard Settings** and then,
 ### Other useful keyboard tips
 
 1. Map top-left keyboard to backslash/tilde symbols. Install [Karabiner-Elements](https://karabiner-elements.pqrs.org/) and setting up "non_us_backslash" to "grave_accent_and_tilde (`)". If you don't know the names of some keys, you can use installed Karabiner Viewer.
+
 2. Three fingers to drag (choose texts): **System Preferences** > **Accessibility** > **Pointer Control** > **Trackpad Options...** > Enable dragging (three fingers drag).
-3. Install [AltTab](https://alt-tab-macos.netlify.app/) (and use [[⌘]] + [[⇥]] which replaces the default method on mac, be careful!!!) to switch between windows (instead of apps) like on Windows/Linux: `brew install --cask alt-tab`. Open its preferences (We wanna show windows only on the screen containing the cursor):
-   - General > tick on "Start at login".
-   - Controls > Show windows from: "Screen showing AltTab" (on the 3rd option).
-   - Appearance > Show on "Screen including mouse".
+
+3. Install ~~[AltTab](https://alt-tab-macos.netlify.app/)~~ [HyperSwitch](https://bahoom.com/hyperswitch) (and use [[⌘]] + [[⇥]] which replaces the default method on mac, be careful!!!) to switch between windows (instead of apps) like on Windows/Linux.
+
+    ::: hsbox More settings of AltTab
+
+    Open its preferences (We wanna show windows only on the screen containing the cursor):
+
+    - General > tick on "Start at login".
+    - Controls > Show windows from: "Screen showing AltTab" (on the 3rd option).
+    - Appearance > Show on "Screen including mouse".
+
+    :::
+
 4. **For external keyboard K380**: Download and install [Logitech Options](https://www.logitech.com/en-us/product/options). Install this to use [[F]] keys by default. **Remark**: Don't open Bitwarden while using K380, otherwise, it won't work normally (for example, F keys).
 
 ## **Printers & Scanners**
@@ -114,7 +124,7 @@ defaults write com.apple.QuickTimePlayerX NSQuitAlwaysKeepsWindows -bool false
 - [Authy](https://authy.com/) -- Two factor authentication (Yes, use it instead of Google Authenticator or others!)
 - (Optional) [balenaEtcher](https://www.balena.io/etcher/) -- Flash OS images to SD cards & USB drives, safely and easily. In case you wanna make a bootable USB to install other OS.
 - [Bartender 4](https://www.macbartender.com/Bartender4/) (paid, 15.37$) -- hide some icons on menu bar. 💡 **Tip**: You can try the trial version and then click "Remind me later" and keep using the trial version without purchasing it.
-- [CleanMyMac](https://macpaw.com/cleanmymac) (paid) -- uninstaller + optimize your mac.
+- [CleanMyMac](https://macpaw.com/cleanmymac) (paid) -- uninstaller + optimize your mac. **An alternative**: [BuhoCleaner](https://www.drbuho.com/) (free version is almost enough).
 - **Communication**: [Skype](https://www.skype.com/en/get-skype/), [Zoom](https://zoom.us/download), [Slack](https://slack.com/intl/en-fr/downloads/mac).
 - [Docker](https://docs.docker.com/docker-for-mac/apple-m1/)
 - ~~[Dropbox](https://www.dropbox.com/downloading). We can "quit" the app on dock, the icon on menu still there!~~ [Google Drive](https://www.google.com/drive/download/) -- sync personal data files.
@@ -131,6 +141,7 @@ defaults write com.apple.QuickTimePlayerX NSQuitAlwaysKeepsWindows -bool false
 - [MusicBrainz Picard](https://picard.musicbrainz.org/) - Free music tag editor.
 - ~~[Paragon NTFS](https://www.paragon-software.com/home/ntfs-mac/) (paid, 20$)~~ [Mounty](https://mounty.app/) (no need to restart) -- Do everything with Windows drives on your Mac.
   - Another option: you can buy an OTG (On-The-go) adapter and connect the external drive using it without any problem. I used [Urgreen's](https://www.amazon.fr/gp/product/B072V9CNTK).
+  - In case you wanna format an USB drive as NTFS, 1st, install the (open-source) [NTFS driver - ntfs-3g](https://github.com/tuxera/ntfs-3g).
 - [Paintbrush](https://paintbrush.sourceforge.io/) -- a "Paint like" for macOS. A simple image editor for macOS.
 - **[New]** [PlayCover](https://www.playcover.me/) -- Run iOS apps & games. Fullscreen mode. Mouse, keyboard and controller support.
 - [Qbserve](https://qotoqot.com/qbserve/) (paid, 15 days trial) -- Activities tracker for MacOS. Record all of your activities on your Mac (and show in real time on menu bar) your productivity. I chose it because I can buy it forever without subscription and satisfies with its simple UI.
@@ -260,30 +271,30 @@ HTML Entity     GLYPH  NAME
 
 1. After updating
 
-      ```bash
-      defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock
-      ```
+    ```bash
+    defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock
+    ```
 
-      Need to update _Xcode Command-line Tools_:
+    Need to update _Xcode Command-line Tools_:
 
-      ```bash
-      # option 1
-      xcode-select --install
-      # output:
-      xcode-select: note: install requested for command line developer tools
-      ```
+    ```bash
+    # option 1
+    xcode-select --install
+    # output:
+    xcode-select: note: install requested for command line developer tools
+    ```
 
-      ```bash
-      # option 2 (if option 1 doesn't work)
-      # Login + download from webpage
-      https://developer.apple.com/download/more/
-      ```
+    ```bash
+    # option 2 (if option 1 doesn't work)
+    # Login + download from webpage
+    https://developer.apple.com/download/more/
+    ```
 
 2. In case of error in installing Application with `App is Damaged Can’t Be Opened`
 
-   ```bash
-   xattr -cr /Applications/App_Name.app
-   ```
+    ```bash
+    xattr -cr /Applications/App_Name.app
+    ```
 
 ### Sidecar problems
 
@@ -297,6 +308,10 @@ Using Sidecar feature to turn your ipad to an external screen. It ==works normal
 6. For ones who using mac's usb-c port. A direct hub (with an lightning output to charge ipad) may not work (not sufficient power to charge ipad). However, usign another usb-dock and connect to the hub is working fine. Other words,
    - _Not working_: mac - hub - ipad.
    - _Working_: mac - hub - usb doc - ipad
+
+### FPT connection problem
+
+If you have any problem with the connection, like *The share does not exist on the server. Please check the share name, and then try again.*, make sure the password doesn't contain `@`! ([Source](https://apple.stackexchange.com/questions/110965/connect-to-ftp-server-in-finder-not-working))
 
 ## **External screens**
 
@@ -321,7 +336,6 @@ defaults write com.apple.iCal NSRequiresAquaSystemAppearance -bool No
 
 # Restart the app
 ```
-
 
 
 ## Other settings
@@ -351,4 +365,6 @@ defaults write com.apple.iCal NSRequiresAquaSystemAppearance -bool No
    ```bash
    defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock
    ```
+
+5. Paste as plain text (Paste and match style) using [[cmd]] + [[shift]] + [[v]] (for example): System Preferences > Keyboard > Shortcuts > App Shortcuts > + (Add). Now you choose: all apps; menu title: Paste and Match Style; Keyboard Shortcut: [[cmd]] + [[shift]] + [[v]] (choose your own).
 

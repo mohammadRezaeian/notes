@@ -33,14 +33,14 @@ Google's documentation is like an ocean. It's not easy to find a right one to st
 
 2. [Service endpoint](https://cloud.google.com/dialogflow/es/docs/reference/rest/v2-overview#service-endpoint).
 
-    ::: info
-    💡 **Tip**: `us-dialogflow.googleapis.com` and `dialogflow.googleapis.com` are the same, so you can use `<location>-dialogflow.googleapis.com` in your codes.
+    ::: tip
+    `us-dialogflow.googleapis.com` and `dialogflow.googleapis.com` are the same, so you can use `<location>-dialogflow.googleapis.com` in your codes.
     :::
 
 3. [Available regions](https://cloud.google.com/dialogflow/es/docs/how/region#regions) (used in `locations`).
 
-    ::: info
-    💡 **Tip**: `<region>-dialogflow.googleapis.com` = endpoint.
+    ::: tip
+    `<region>-dialogflow.googleapis.com` = endpoint.
     :::
 
 4. [google/google-api-javascript-client](https://github.com/google/google-api-javascript-client) -- aka `gapi`. Github repo.
@@ -51,7 +51,7 @@ Google's documentation is like an ocean. It's not easy to find a right one to st
 
 7. [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/).
 
-7. [Understand roles](https://cloud.google.com/iam/docs/understanding-roles?authuser=1&_ga=2.35673635.-287242851.1634158283#dialogflow-roles) -- If you decide to create a service account, you will need to assign a role to some users/emails. Each role has different rights to use your data.
+8. [Understand roles](https://cloud.google.com/iam/docs/understanding-roles?authuser=1&_ga=2.35673635.-287242851.1634158283#dialogflow-roles) -- If you decide to create a service account, you will need to assign a role to some users/emails. Each role has different rights to use your data.
 
 {% endhsbox %}
 
@@ -300,9 +300,9 @@ global-dialogflow.googleapis.com
 - If you choose a project, there are some roles cannot be added because they belongs to folders/organization (eg. `resourcemanager.projects.list`)
 - ([ref](https://console.cloud.google.com/cloud-setup/organization?organizationId=247943502148)) You have to pay (using *Google Workspace* or *Google Identity*) to create an organization or a folder.
 
-::: info
+::: tip
 
-💡 **Useful tip**: If you already have a domain, you can try to create a Google Workspace and use it in 1 month of trial. After that, you can deactivate the Google Workspace account but the things on the Google Cloud Platform are still there and the organization you have created in Google Workspace is still working!
+If you already have a domain, you can try to create a Google Workspace and use it in 1 month of trial. After that, you can deactivate the Google Workspace account but the things on the Google Cloud Platform are still there and the organization you have created in Google Workspace is still working!
 
 :::
 
@@ -380,9 +380,9 @@ If you use SDK [`listProjectsAsync`](https://googleapis.dev/nodejs/resource/late
 
 
 
-::: info
+::: tip
 
-💡 **Quota**: For each Service Account, ==the limit of number of projects you can create is 22==. You can ask more but the better idea is to create another service account (and don't forget to remove the old one with its credentials).
+**Quota**: For each Service Account, ==the limit of number of projects you can create is 22==. You can ask more but the better idea is to create another service account (and don't forget to remove the old one with its credentials).
 
 :::
 

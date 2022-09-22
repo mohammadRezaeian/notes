@@ -5,7 +5,7 @@ tags: [API & Services, Google]
 toc: true
 icon: colab.png
 keywords: "github notebook google drive hotkey TensorFlow pytorch gpu import library git with colab upload a file to colab 7zip zip graphviz pydot cartopy save as html keep google colab open awake prevent from disconnect re-install install packages"
-date: 2022-04-21
+date: 2022-07-06
 ---
 
 {% assign img-url = '/img/post/skills' %}
@@ -18,6 +18,9 @@ date: 2022-04-21
 
 ## Colab & Github
 
+👉 Check [this section](#clone-a-repo-from-github) too.
+
+::: hsbox Open with Colab from Github URL
 "*Open with Colab*" any Jupyter Notebook file (`.ipynb`) in Github. For example, the file's URL is:
 
 ~~~ bash
@@ -29,8 +32,11 @@ You can open with colab with the URL:
 ~~~ bash
 https://colab.research.google.com/github/dinhanhthi/dataquest-aio/blob/master/file-name.ipynb
 ~~~
+:::
 
-In the case you wanna import dataset (`.csv`) from Github. First, open this `.csv` file as RAW. Its URL may be
+::: hsbox In the case you wanna import dataset (`.csv`) from Github.
+
+First, open this `.csv` file as RAW. Its URL may be
 
 ~~~ bash
 https://raw.githubusercontent.com/dinhanhthi/dataquest-aio/master/file.csv
@@ -51,6 +57,15 @@ opened_file = urlopen(dataset_url).read().decode('utf-8')
 read_file = csv.reader(opened_file.splitlines())
 ~~~
 
+:::
+
+::: hsbox Save a notebook to Github
+
+For example, I wanna save current notebook (eg. `abc.ipynb` to repository `data-science-learning/playground`).
+
+From the notebook, **File** > **Save a copy in Github** > Choose a repository > Type `playground/` before *File path* > OK.
+
+:::
 
 ## Hotkeys / Shortcuts
 
@@ -74,9 +89,8 @@ Check the command shortcuts in **Tools** > **Keyboard shortcuts** (<kbd>Ctrl</kb
 
 :::
 
-::: success
+::: tip
 We can use system commands in Colab with `!<command>`. For example, `!git clone ...`.
-
 :::
 
 ## Import libraries
@@ -89,7 +103,7 @@ We can use system commands in Colab with `!<command>`. For example, `!git clone 
 
 ### Install permanently
 
-👇 [Source](https://stackoverflow.com/a/57708521/1323473) (There are a little bit changes).
+{% hsbox "Install with `gsfuse` ([source](https://stackoverflow.com/a/57708521/1323473))" %}
 
 Install `gcsfuse`,
 
@@ -112,7 +126,6 @@ Install `gcsfuse`,
 - Create a new [Google Storage Bucket](https://console.cloud.google.com/storage/browser) (you may be charged).
 
 :::
-
 
 
 ```bash
@@ -147,7 +160,40 @@ Whenever you want to install a package,
 !pip install --target=$nb_path transformers
 ```
 
+{% endhsbox %}
 
+{% hsbox "Install to Google Drive (My choice) ([source](https://ayoolafelix.hashnode.dev/how-to-permanently-install-a-module-on-google-colab-ckixqrvs40su044s187y274tc))" %}
+
+```python
+import os, sys
+from google.colab import drive
+drive.mount('/content/gdrive')
+nb_path = '/content/notebooks'
+# You may need to create INSTALLED_LIBS folder before following step
+os.symlink('/content/gdrive/My Drive/Colab Notebooks/INSTALLED_LIBS', nb_path)
+sys.path.insert(0, nb_path)
+```
+
+```python
+!pip install --target=$nb_path transformers
+```
+
+From now, everytime you open a new notebook,
+
+```python
+import sys
+sys.path.append('/content/gdrive/My Drive/Colab Notebooks/INSTALLED_LIBS')
+
+from google.colab import drive
+drive.mount('/content/gdrive')
+```
+
+```python
+# Try?
+!pip install --target=$nb_path transformers
+```
+
+{% endhsbox %}
 
 ## Upgrade/Switch TensorFlow versions
 
@@ -240,93 +286,6 @@ From that point, we are working on `/content/data-science-learning`.
 ## Upload a file to Colab{% ref "https://colab.research.google.com/notebooks/io.ipynb#scrollTo=hauvGV4hV-Mh" %}
 
 Each user has a "machine" in `/content/`.
-
-## Install
-
-~~~ bash
-sudo apt install screen # ubuntu
-~~~
-
-## Basic command lines
-
-<div class="col-2-equal">
-
-~~~ bash
-# check screen version
-screen -v
-~~~
-
-~~~ bash
-# start new session (with name)
-screen -S <name>
-~~~
-
-~~~ bash
-# list running sessions
-screen -ls
-~~~
-
-~~~ bash
-# attach to a running session (without name)
-screen -x
-~~~
-
-~~~ bash
-# attach to a running session (with name)
-screen -rx <name>
-# -x for an interactive (scrolling)
-~~~
-
-~~~ bash
-# detach a running session
-screen -d <name> # or Ctrl + A, D
-~~~
-
-``` bash
-# kill a session
-screen -X -S <name> quit
-```
-</div>
-
-### Delete sessions
-
-1. Reattach first: `screen -r <name>`
-2. <kbd>Ctrl</kbd> + <kbd>A</kbd>, <kbd>K</kbd> then <kbd>Y</kbd>
-
-``` bash
-# kill ALL auto-created sesssions
-screen -ls | grep pts | cut -d. -f1 | awk '{print $1}' | xargs kill
-
-# kill all detached sessions
-screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs kill
-```
-
-## Create a screen + list of command lines
-
-``` bash
-screen -S 'dat' -dm bash -c 'cd /jekyll-site; bundle exec jekyll serve -I; exec sh'
-```
-
-## Hotkeys
-
-- Detach: <kbd>Ctrl</kbd> + <kbd>A</kbd>, <kbd>D</kbd>
-- Reattach: <kbd>Ctrl</kbd> + <kbd>A</kbd>, <kbd>R</kbd>
-- Kill current session: <kbd>Ctrl</kbd> + <kbd>A</kbd>, <kbd>K</kbd> then <kbd>Y</kbd>
-
-## Errors
-
-``` bash
-# Cannot make directory '/run/screen': Permission denied
-mkdir ~/.screen && chmod 700 ~/.screen
-export SCREENDIR=$HOME/.screen
-# also add this line to ~/.zshrc or ~/.bashrc
-```
-
-## Reference
-
-- [Screen Quick Reference](https://gist.github.com/jctosta/af918e1618682638aa82)
-
-
 
 Create a new cell and paste,
 

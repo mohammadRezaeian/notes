@@ -24,6 +24,12 @@
     "url": "https://getbootstrap.com/"
   },
   {
+    "id": "detectron2",
+    "name": "Detectron2",
+    "icon": "detectron2.png",
+    "url": "https://github.com/facebookresearch/detectron2"
+  },
+  {
     "id": "dialogflow",
     "name": "Dialogflow",
     "icon": "dialogflow.svg",
@@ -112,6 +118,12 @@
     "name": "HTML5",
     "icon": "html.svg",
     "url": "https://html.com/html5/"
+  },
+  {
+    "id": "huggingface",
+    "name": "Hugging Face",
+    "icon": "huggingface.svg",
+    "url": "https://huggingface.co/"
   },
   {
     "id": "jekyll",

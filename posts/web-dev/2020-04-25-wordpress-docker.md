@@ -10,16 +10,13 @@ date: 2021-10-27
 
 {% assign img-url = '/img/post/web-dev' %}
 
-:point_right: Note: [All notes of Wordpress](/tags/wordpress/).
-👉 Note: [Docker 101](/docker/)
-👉 Note: [Docker + GPUs](/docker-gpu/)
-👉 Note: [Airflow + Kubernetes 101](/airflow-k8s-101/)
-👉 Note: [Tensorflow extra](/tensorflow/)
+👉 Note: [All Wordpress notes](/tags/wordpress/).
+👉 Note: [All Docker notes](/tags/docker/).
 
 In this note, I wanna an automatical setting up of basic things.
 
 ::: success
-💡 **Update**: Using [Local](https://localwp.com/)! You can create very quickly a simple wordpress on localhost with a domain `website.local`. You can also backup your site and drag-n-drop into Local for using locally.
+💡 Using [Local](https://localwp.com/)! You can create very quickly a simple wordpress on localhost with a domain `website.local`. You can also backup your site and drag-n-drop into Local for using locally. **However**, Local are not always working with the custom themes.
 :::
 
 👉 Install Docker by following [this note](/docker#installation).

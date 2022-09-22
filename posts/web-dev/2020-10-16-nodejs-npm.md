@@ -6,7 +6,7 @@ toc: true
 icon: nodejs.png
 notfull: 1
 keywords: "js javascript package management Node Manager npm nvm node nodejs yarn js cli env environment"
-date: 2021-11-16
+date: 2022-09-13
 ---
 
 {% assign img-url = '/img/post/js/gatsby' %}
@@ -249,5 +249,22 @@ console.log(inspect(myObject, {showHidden: false, depth: null, colors: true}))
 // Without module
 const util = require('util')
 console.log(util.inspect(myObject, {showHidden: false, depth: null, colors: true}));
+```
+
+
+
+## Troubleshooting
+
+:eight_pointed_black_star: _[Error: EACCES: permission denied, open '/Users/thi/.ngrok/..._
+
+```bash
+# Error
+sudo npm install ngrok -g
+
+# Check the permission
+ls -la /Users/thi/.ngrok
+
+# Change the permission to "thi"
+sudo chown -R $USER /Users/thi/.ngrok
 ```
 

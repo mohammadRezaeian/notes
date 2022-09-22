@@ -5,7 +5,15 @@
   },
   {
     "name": "AI & Data",
-    "list": ["jupyter", "pytorch", "scikit-learn", "tensorflow"]
+    "list": [
+      "detectron2",
+      "huggingface",
+      "jupyter",
+      "pytorch",
+      "scikit-learn",
+      "tensorflow",
+      "vertex-ai"
+    ]
   },
   {
     "name": "Frontend",
@@ -43,6 +51,19 @@
   },
   {
     "name": "Tools & Services",
-    "list": ["bash", "dialogflow", "gcp", "git", "gitkraken", "latex", "linux", "postman", "sphinx", "vertex-ai", "vscode"]
+    "list": [
+      "bash",
+      "dialogflow",
+      "gcp",
+      "git",
+      "gitkraken",
+      "huggingface",
+      "latex",
+      "linux",
+      "postman",
+      "sphinx",
+      "vertex-ai",
+      "vscode"
+    ]
   }
 ]

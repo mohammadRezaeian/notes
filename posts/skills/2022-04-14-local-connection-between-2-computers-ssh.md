@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Connect between 2 computers locally"
+title: "Local connection between 2 computers"
 tags: [Skills, Linux, Shell]
 toc: false
 icon: lan.svg
-keywords: "ssh connection 2 computer local LAN open server terminal"
-date: 2022-04-20
+keywords: "ssh connection 2 computer local LAN open server terminal nomachine no machine"
+date: 2022-08-20
 ---
 
 
@@ -20,11 +20,9 @@ Two computers must be connected to the same network!
 :::
 
 
-
 👉 Note: [SSH](/ssh/).
 👉 Note: [ Docker  + GPUs](/docker-gpu/)
 👉 Note: [Docker 101](/docker/)
-
 
 
 ## Control visually
@@ -40,7 +38,9 @@ Go into **Server settings** > **Security**
 
 :::
 
+### Connect to a NoMachine Server running on Windows
 
+It requires username and password and you are connected using your Microsoft account, don't user the username and password being set up in the System Preferences, use your Microsoft Account credentials!
 
 ## Connect via SSH
 
@@ -107,7 +107,7 @@ scp file.pdf thi@pop-os.local:/home/thi/Downloads/
 ```bash
 # server
 pop-os.local # or using ip address
-# port 
+# port
 22
 # username
 thi
@@ -121,12 +121,12 @@ thi
 👉 Note: [Docker](/docker/)
 👉 Note: [SSH](/ssh/)
 
-Suppose that there is a jupyter lab server which is running on **comp1** (In my case, it's running inside a docker container which is ported to **comp1** via port `8888`). 
+Suppose that there is a jupyter lab server which is running on **comp1** (In my case, it's running inside a docker container which is ported to **comp1** via port `8888`).
 
 ```bash
 # On comp2
 ssh -N -L localhost:8888:127.0.0.1:8888 thi@pop-os.local
-# Remark: keep the terminal 
+# Remark: keep the terminal
 ```
 
 Then open http://localhost:8888/lab to see the result!

@@ -1,5 +1,12 @@
 [
   {
+    "title": "math2it-wordpress-gatsby",
+    "description": "An attemp to migrate a wordpress site to gatsby",
+    "source": "https://github.com/dinhanhthi/math2it-egg",
+    "icon": "🥚",
+    "tech": ["bash", "gatsby", "git", "graphql", "js", "php", "postman", "python", "react", "scss", "tailwindcss", "ts", "wordpress"]
+  },
+  {
     "title": "dinhanhthi.com-v4 in gatsby",
     "description": "An implementation of my personal website (v4) using GatsbyJS and TailwindCSS. It's not complete (and I've discontinued) but it's well written.",
     "source": "https://github.com/dinhanhthi/dinhanhthi.com-v4-gatsby",

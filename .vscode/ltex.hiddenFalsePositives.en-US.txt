@@ -1,0 +1,3 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q👉 Note: 11ty & Nunjucks.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QTypora (what you see is what you get).\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QVSCode (with extensions Markdown All in One and Markdown Image).\\E$"}

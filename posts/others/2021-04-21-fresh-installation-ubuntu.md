@@ -4,7 +4,7 @@ title: "Fresh Ubuntu / Pop!_OS Installation"
 tags: [Others, Fresh Installation, Linux, Collection]
 toc: true
 icon: ubuntu.svg
-keywords: "to do list after installing ubuntu debian elementary os linux airpod bluetooth capture screen screen recorder guake xps k380 keyboard logitech pop os popos"
+keywords: "to do list after installing ubuntu debian elementary os linux airpod bluetooth capture screen screen recorder guake xps k380 keyboard logitech pop os popos refind dual boot"
 date: 2022-04-13
 ---
 

@@ -4,16 +4,14 @@ title: "Docker + GPUs"
 tags: [MLOps, Docker, Backend]
 toc: true
 icon: docker.svg
-keywords: "pybash tania rascia CI CD continuous integration deployment pipeline docker idea how to use airflow kubernetes k8s k apache container images dangling images vscode vsc visual studio code ssh container env environnement file variable nvidia docker runtime gpus tensorflow torch"
-date: 2022-06-23
+keywords: "pybash tania rascia CI CD continuous integration deployment pipeline docker idea how to use airflow kubernetes k8s k apache container images dangling images vscode vsc visual studio code ssh container env environnement file variable nvidia docker runtime gpus tensorflow torch cudnn cuda toolkit cudatoolkit"
+date: 2022-09-02
 ---
 
 {% assign img-url = '/img/post/deploy/docker' %}
 
-👉 Note: [Docker 101](/docker/)
-👉 Note: [Wordpress Docker](/wordpress-docker/)
-👉 Note: [Airflow + Kubernetes 101](/airflow-k8s-101/)
-👉 Note: [Tensorflow extra](/tensorflow/)
+👉 Note: [All docker notes](/tags/docker/).
+👉 [My Dockerfile setting up on Github.](https://github.com/dinhanhthi/my-dockerfiles)
 
 ## WSL + Windows
 
@@ -28,11 +26,11 @@ date: 2022-06-23
 ## Basic installation
 
 ::: warning
-You have to install (successfully) GPU driver on your (linux) machine before continuing the steps in this note. Go to "[Check info](#check-info)" section to check the availability of your drivers.
+You must (successfully) install the GPU driver on your (Linux) machine before proceeding with the steps in this note. Go to the "[Check info](#check-info)" section to check the availability of your drivers.
 :::
 
 ::: info
-(Maybe **for me only**) It works perfectly on **Pop!_OS 20.04**, I've tried and we have many problems with **Pop!_OS 21.10**. Therefore ==stick to 20.04==!!!!
+(Maybe **just for me**) It works perfectly on **Pop!_OS 20.04**, I tried it and we have a lot of problems with **Pop!_OS 21.10** so ==stay with 20.04==!
 :::
 
 ``` bash
@@ -47,26 +45,26 @@ sudo apt install -y nvidia-cuda-toolkit
 # restard required
 ```
 
-If you have problems when installing `nvidia-docker2`, read [this section](/docker-gpu/#install-nvidia-docker2)!
+If you have problems installing `nvidia-docker2`, read [this section](/docker-gpu/#install-nvidia-docker2)!
 
 ## Check info
 
 ``` bash
-# verify that your computer has a graphic card
-lspci -nn | grep '\[03'
+# Verify that your computer has a graphic card
+lspci | grep -i nvidia
 ```
 
 ``` bash
 # First, install drivers and check
 nvidia-smi
 # output: NVIDIA-SMI 450.80.02 Driver Version: 450.80.02    CUDA Version: 11.0
-# it's maximum CUDA version that your driver supports
+# It's the maximum CUDA version that your driver supports
 ```
 
 ``` bash
-# check current version of cuda
+# Check current version of cuda
 nvcc --version
-# If there is not nvcc, it may be in /usr/local/cuda/bin/
+# If nvcc is not available, it may be in /usr/local/cuda/bin/
 # Add this location to PATH
 # modify ~/.zshrc or ~/.bashrc
 export PATH=/usr/local/cuda/bin:$PATH
@@ -78,7 +76,7 @@ sudo apt install -y nvidia-cuda-toolkit
 If below command doesn't work, try to install `nvidia-docker2` (read [this section](#install-nvidia-docker2)).
 
 ``` bash
-# install and check nvidia-docker
+# Install and check nvidia-docker
 dpkg -l | grep nvidia-docker
 # or
 nvidia-docker version
@@ -90,10 +88,10 @@ docker run --help | grep -i gpus
 # output: --gpus gpu-request GPU devices to add to the container ('all' to pass all GPUs)
 ```
 
-### Check docker work with gpu?
+### Does Docker work with GPU?
 
 ``` bash
-# Listing out GPU devices
+# List all GPU devices
 docker run -it --rm --gpus all ubuntu nvidia-smi -L
 # output: GPU 0: GeForce GTX 1650 (...)
 ```
@@ -129,13 +127,13 @@ docker run -it --rm --gpus all ubuntu nvidia-smi
 # and another box like this
 ```
 
-::: hsbox Archived but still useful
+::: hsbox It's archived, but still useful
 
 ``` bash
 # Test a working setup container-toolkit
 # Update 14/04/2022: the tag "latest" has deprecated => check your system versions and use
 # the corresponding tag
-# So, the below code is only for reference, it's not working anymore
+# The following code is for reference only, it no longer works
 docker run --rm --gpus all nvidia/cuda nvidia-smi
 ```
 
@@ -154,6 +152,20 @@ docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
 
 
 
+### Check `cudnn`
+
+```bash
+whereis cudnn
+# cudnn: /usr/include/cudnn.h
+
+# Check cudnn version
+cat /usr/include/cudnn.h | grep CUDNN_MAJOR -A 2
+# or try this (it works for me, cudnn 8)
+cat /usr/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
+```
+
+
+
 ## Install `nvidia-docker2`
 
 {% hsbox "More information ([ref](https://github.com/NVIDIA/nvidia-docker/issues/1268))" %}
@@ -164,7 +176,7 @@ docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
 
 👉 (Should follow this for the up-to-date) [Officicial guide to install](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker).
 
-**Note**: (For me only) use below codes.
+**Note**: (Only for me) Use the codes below.
 
 {% hsbox "Command lines (for quickly preview)" %}
 
@@ -432,10 +444,10 @@ _RuntimeError: cuda runtime error (804) : forward compatibility was attempted on
 ## Make NVIDIA work in docker (Linux)
 
 ::: danger
-This section is still working (on 26-Oct-2020) but it's old for newer methods.
+This section still works (on 26-Oct-2020), but it's obselete for newer methods.
 :::
 
-**Idea**: Using NVIDIA driver of the base machine, don't install anything in docker!
+**One idea**: Use NVIDIA driver of the base machine, don't install anything in Docker!
 
 
 {% hsbox "Detail of steps" %}
@@ -446,7 +458,7 @@ This section is still working (on 26-Oct-2020) but it's old for newer methods.
 	``` bash
 	# list all gpus
 	lspci -nn | grep '\[03'
-
+	
 	# check nvidia & cuda versions
 	nvidia-smi
 	```
@@ -455,11 +467,11 @@ This section is still working (on 26-Oct-2020) but it's old for newer methods.
 	``` bash
 	curl -s -L https://nvidia.github.io/nvidia-container-runtime/gpgkey | sudo apt-key add -
 	distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
-
+	
 	curl -s -L https://nvidia.github.io/nvidia-container-runtime/$distribution/nvidia-container-runtime.list | sudo tee /etc/apt/sources.list.d/nvidia-container-runtime.list
-
+	
 	sudo apt-get update
-
+	
 	sudo apt-get install nvidia-container-runtime
 	```
 3. Note that, <mark markdown='span'>we cannot use `docker-compose.yml` in this case!!!</mark>
@@ -467,17 +479,17 @@ This section is still working (on 26-Oct-2020) but it's old for newer methods.
 
 	``` docker
 	FROM nvidia/cuda:10.2-base
-
+	
 	RUN apt-get update && \
 		apt-get -y upgrade && \
 		apt-get install -y python3-pip python3-dev locales git
-
+	
 	# install dependencies
 	COPY requirements.txt requirements.txt
 	RUN python3 -m pip install --upgrade pip && \
 		python3 -m pip install -r requirements.txt
 	COPY . .
-
+	
 	# default command
 	CMD [ "jupyter", "lab", "--no-browser", "--allow-root", "--ip=0.0.0.0"  ]
 	```
@@ -485,7 +497,7 @@ This section is still working (on 26-Oct-2020) but it's old for newer methods.
 
 	``` bash
 	docker run --name docker_thi --gpus all -v /home/thi/folder_1/:/srv/folder_1/ -v /home/thi/folder_1/git/:/srv/folder_2 -dp 8888:8888 -w="/srv" -it img_datas
-
+	
 	# -v: volumes
 	# -w: working dir
 	# --gpus all: using all gpus on base machine

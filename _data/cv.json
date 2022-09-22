@@ -16,6 +16,7 @@
         "tech": [
           "angular",
           "bash",
+          "detectron2",
           "dialogflow",
           "docker",
           "firebase",
