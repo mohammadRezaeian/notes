@@ -9,7 +9,7 @@ keywords: "difference blog note post type"
 date: 2022-08-10
 ---
 
-Notes are for reading later and quickly remembering what you read/learned. Blog posts are for explaining a topic clearly and completely.
+**Notes** are for reading later and quickly remembering what you read/learned. **Blog posts** are for explaining a topic clearly and completely.
 
 Below is a short list of the differences between blog posts and notes on this website.
 

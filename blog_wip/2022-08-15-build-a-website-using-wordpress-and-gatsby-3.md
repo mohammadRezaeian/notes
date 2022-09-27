@@ -17,141 +17,67 @@ All of the previous steps are performed totally on local (*math2it.local* and *l
 ## What we want (WWW)
 
 1. A server hosts our website, like local hosts `http://localhost:8000`.
-2. When we change something in the theme or in the Wordpress site and push it to github, the server detects it and rebuild the site.
-3. Same as 2 but this time, the server only parts related to the changes.
-
-
+2. When we change something in the theme (by pushing to Github) or in the Wordpress site, the server detects them and rebuild the site.
+3. Same as 2 but this time, the **server rebuilds only parts related to the changes**.
 
 ## Options to choose
 
 1. You can build your site locally and publish the `public/` folder to github. The rest will be handled by Github Pages or Netlify to serve your HTML files. This option supports only WWW1, your site is really static, you have to build manually each time the site has something new.
-   - **Pros**: It's free and the time of deploy is too quick (because the server just publish the HTML files).
+   - **Pros**: It's free and the time of deploy is quick (because the server just publishes the HTML files).
    - **Cons**: Everything else the deployment is performed manually!
-2.
+2. Let a service like Netlify or Gatsby Cloud to build and serve your site, nothing is performed on local.
+   - **Pros**: All are automatically, all of 3 WWWs are satisfied.
+   - **Cons**: the building time is long and the usage is limit. The site need to be built again whenever the server detects some changes (even if you only change the title of some WP post). **This is the big disadvantage of using Gatsby in case of free/low-cost use**. You also have to have another sever to host your WP site.
 
-A server for these purposes is not totally free. If your website grows, you have to pay for the running server. Therefore, we have 2 options in this case:
+::: info
 
-1. Manually build your site on local and use Github Pages (or free Netflify service) to serve your static site (in HTML formats).
-2. Use a free service to host your site (Gatsby Cloud, Netlify,... They all have free tiers). Think of paid tiers when your website grows.
-3. Pay what you need.
+==**In this post, I'll do everything to reduce the cost of deployment!**== If you have other ideas who work better, please let me know in the comment below.
+
+:::
+
+::: tip
+
+Instead of Gatsby, you can check [Next.js](https://nextjs.org/), another SSG (also based on React) which supports [Incremental Static Regeneration](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration) (only build what changes, not the whole site).
+
+:::
 
 
+
+## Cleaning your Wordpress site
+
+When Gatsby builds your site, plugin `gatsby-source-wordpress` will fetch all data from your WP site including the media which is the most heavy thing. When developing with Local and everything on your machine, the building process seems work quite fast but when we use online services to build and deploy your site, Gatsby needs more time than that.
+
+That's why we need to reduce the size of our WP site.
+
+::: warning
+
+The methods I use in this post are "the hard ways". They work well with my site which has around 150 posts and it has not so many images.
+
+:::
+
+### Turn off auto-generating thumbnails for images
+
+When you upload an image to the media library of WP, all of "neccessary" thumbnails (different sizes and reso) will be generated automatically based on both of the setting of you WP site and the theme your site is using. You don't need these thumbnails in your Gatsby site. **When Gatsby fetch the images, they fetch the original images from your WP site** and it will generate itself the thumbnails when building.
+
+I use [reGenerate Thumbnails Advanced](https://wordpress.org/plugins/regenerate-thumbnails-advanced/) to re-generate all of the current images on my site and remove all of the thumbnails. To prevent the generation when you upload new images in the future, you can use [Stop Generating Unnecessary Thumbnails](https://wordpress.org/plugins/image-sizes/) plugin.
+
+### Resize and compress the featured images
+
+When you upload an image to the WP Library, this image may be heavy (in Mbs). It's best practice to resize and compress it before uploading to your site but how about the ones you have uploaded?
+
+I use [`imagemagick`](https://imagemagick.org/) to resize the images to `1280x1080` max of width and height and skip ones below this threshold.
 
 ```bash
-npm run build # gatsby build
-```
-
-
-
-Resize images
-
-```bash
-# https://stackoverflow.com/a/73729489/1323473
-brew install imagemagick
+# Resize all images in the current folder and put the new images in ./out/
 magick mogrify -path out -resize 1280x1080\> *
 ```
 
-[Compress image](https://www.iloveimg.com/compress-image)
+In order to compress the images, you can use [iloveimg](https://www.iloveimg.com/compress-image) website.
+
+### (Optional) Take all originally featured images from subfolders
+
+If WP Amin > Settings > Media > "Organize my uploads into month- and year-based folders" is checked (ususally, it's checked by default), whenever you upload a new image, it will be placed in a subfolder like `2022/09/21/`. So, if you want to find a featured image of a post to resize and compress, you have to know to which it belongs. It's 
 
 
 
-Nhớ chỉnh setting > media > bỏ bớt option generate auto images + bỏ option upload vào sub folder!
 
-GraphiQL IDE -> check post name + post id + feature image
-
-Lưu ý: `first:100` là maximum 100 by default! <- because can lead to client and server performance issues. This is why WPGraphQL limits to a max of 100 nodes by default ([ref](https://wordpress.org/support/topic/graphiql-ide-get-more-results-in-query/)) -> [increase this number](https://www.devtwins.com/blog/wpgraphql-increase-post-limit) (be careful, just do on local!)
-
-```graphql
-{
-  posts(where: {orderby: {field: DATE, order: DESC}}, first: 100) {
-    nodes {
-      databaseId
-      title
-      featuredImage {
-        node {
-          slug
-        }
-      }
-    }
-  }
-}
-```
-
-
-
-Local có sẵn `wp-cli`!!!!
-
----
-
-Local > open site shell > (have php installed) > [install wp-cli](https://wp-cli.org/#installing) > just follow download + run
-
-```bash
-php wp-cli.phar --info
-chmod +x wp-cli.phar
-```
-
-that's enough -> check `wp --info`
-
----
-
-Upload + attach + set featured image to a post
-
-```bash
-wp media import --post_id=6804 --featured_image /Users/thi/Downloads/math2it/uploads_resize/geometry1.jpg
-```
-
-
-
-```bash
-brew install php
-brew install mysql
-brew install wp-cli
-
-# check
-wp --info
-php --version
-mysql --version
-```
-
-
-
-`wp-cli.local.yml`
-
-```bash
-path: app/public
-require:
-  - wp-cli.local.php
-```
-
-`wp-cli.local.php` (change the socket path)
-
-```php
-<?php
-define('DB_HOST', 'localhost:/Users/thi/Library/Application Support/Local/run/tYPsK7Qf_/mysql/mysqld.sock');
-define('DB_USER', 'root');
-define('DB_PASSWORD', 'root');
-
-// Only display fatal run-time errors.
-// See http://php.net/manual/en/errorfunc.constants.php.
-error_reporting(1);
-define( 'WP_DEBUG', false );
-
-```
-
-
-
-KHÔNG CẦN CÀI Ở TRÊN -> Copy file `assign_featured_images.py` to source folder of site  => local -> Open Site Shell
-
-```bash
-python assign_featured_images.py 5 6
-```
-
-
-
-Next: check posts containing `img` -> auto replace
-
-https://apidocs.imgur.com/#de179b6a-3eda-4406-a8d7-1fb06c17cb9c <- return <- [doc](https://apidocs.imgur.com/)
-
-
-
-Next: using imgur api to auto upload + using `re` to auto [replace img url using wp-cli (khó???)](https://developer.wordpress.org/cli/commands/search-replace/)! <- https://helgeklein.com/blog/regex-search-replace-in-wordpress-posts-with-wp-cli/

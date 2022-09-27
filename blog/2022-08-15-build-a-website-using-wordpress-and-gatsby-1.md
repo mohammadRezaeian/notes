@@ -119,8 +119,6 @@ You will have an extracted folder called `math2it/`. There should be a `<filenam
 
 :::
 
-
-
 ::: hsbox If you backup manually from a hosting server (I use [Hostinger](https://hostinger.com/))
 
 Go to the hosting panel, select your website (if you have multiple websites) and then select **Backups** > Select **Files backups** > **Choose a date** > **Next step** > Select your site > **Download all files**.
@@ -128,6 +126,12 @@ Go to the hosting panel, select your website (if you have multiple websites) and
 Unzip the dowloaded `.zip` file to a folder, say `math2it/`.
 
 Do the same for the database file: **Backups** > Select **Database backups** > .... to get a `<filename>.sql` file.
+
+:::
+
+::: tip
+
+Another option is [BackWPup](https://wordpress.org/plugins/backwpup/). It works perfectly if you use it to backup your site for Local but the free version doesn't support restore. Just use it to backup to a `.zip` file and then use it directly in Local.
 
 :::
 
