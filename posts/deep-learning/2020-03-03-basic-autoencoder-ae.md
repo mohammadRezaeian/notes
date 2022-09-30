@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Simple AutoEncoder (AE)"
+title: "Basic AutoEncoder (AE)"
 tags: [Deep Learning]
 toc: true
 icon: /img/cats/dl.svg

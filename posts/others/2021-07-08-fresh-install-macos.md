@@ -5,7 +5,7 @@ tags: [Others, Fresh Installation, MacOS, Collection]
 toc: true
 icon: macos.svg
 keywords: "install new macbook setting up applications command line zsh terminal nodejs python brew shortcut cask nodejs node zsh oh-my-zsh xcode bitwarden XCodes dark mode canon printer mg2900"
-date: 2022-09-12
+date: 2022-09-29
 ---
 
 This is my personal list of to-do things for a new Macbook.
@@ -188,9 +188,12 @@ defaults write com.apple.QuickTimePlayerX NSQuitAlwaysKeepsWindows -bool false
   arch
   # arm64 -> ARM
   # i386 -> Intel (running with Rosetta)
+
+  # Clone Terminal.app
+  sudo cp -r /System/Applications/Utilities/Terminal.app /Applications/Terminal-Rosetta.app
   ```
 
-  Copy `/Applications/Utilities/Terminal.app` to Download folder, rename it to **Terminal-Rosetta.app**. Move the new to /Applications/Utilities/ again. Right click on Terminal-Rosetta.app > Get Info > Click on "Open using Rosetta". - If you wanna run commands in Intel environment, use **Terminal-Rosseta**. - If you wanna run commands in ARM environment, use **Terminal.app**.
+  Right click on Terminal-Rosetta.app > Get Info > Click on "Open using Rosetta". - If you wanna run commands in Intel environment, use **Terminal-Rosseta**. - If you wanna run commands in ARM environment, use **Terminal.app**.
 
 - Dropdown terminal with **iTerm2**.
   1. Create a new profile and make it default. Download my customized profile [here](https://github.com/dinhanhthi/scripts/blob/master/settings/macos/DropDown.json).

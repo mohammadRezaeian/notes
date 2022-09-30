@@ -5,7 +5,7 @@ tags: [Skills]
 toc: true
 icon: vsc.png
 keywords: "visual studio code vsc regex regular expression ssh remote server character combining font ligatures couple characters symbols letters new characters installation install extension plugin add extra path to auto complete reStructuredText rst markdown extension pythonremote regular expression regex vscode live server scss css compiler autopep8 formatter"
-date: 2022-05-23
+date: 2022-09-29
 ---
 
 ## Install
@@ -375,5 +375,8 @@ One can change the default keyboard shortcut by going to: **File** > **Preferenc
 - Format selected text: (Win/Linux) [[Ctrl]] + [[K]] then [[K]] + [[F]]; (Mac) [[⌘]] + [[K]] then [[⌘]] + [[F]].
 - Quickly move a line up/down: [[Alt]] + [[up]] / [[down]] (Mac).
 - Quickly duplicate current line: [[Shift]] + [[Alt]] + [[down]] (Mac).
+- Fold all: [[⌘]] + [[K]] then [[⌘]] + [[0]]
+- Fold level 2: [[⌘]] + [[K]] then [[⌘]] + [[2]]
+- Unfold all: [[⌘]] + [[K]] then [[⌘]] + [[J]]
 
 :::

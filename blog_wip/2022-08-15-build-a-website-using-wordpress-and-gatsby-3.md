@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "How to build a website with Wordpress as backend and Gatsby as frontend"
+title: "Build a website with Wordpress and Gatsby"
 description: "Take the power of the blocks in the editor of Wordpress and the speed of a static website of GatsbyJS."
 tags: [Web Dev, Wordpress, GatsbyJS, Static Site Generators, CMS]
 toc: true
@@ -76,7 +76,7 @@ In order to compress the images, you can use [iloveimg](https://www.iloveimg.com
 
 ### (Optional) Take all originally featured images from subfolders
 
-If WP Amin > Settings > Media > "Organize my uploads into month- and year-based folders" is checked (ususally, it's checked by default), whenever you upload a new image, it will be placed in a subfolder like `2022/09/21/`. So, if you want to find a featured image of a post to resize and compress, you have to know to which it belongs. It's 
+If WP Amin > Settings > Media > "Organize my uploads into month- and year-based folders" is checked (ususally, it's checked by default), whenever you upload a new image, it will be placed in a subfolder like `2022/09/21/`. So, if you want to find a featured image of a post to resize and compress, you have to know to which it belongs. It's
 
 
 

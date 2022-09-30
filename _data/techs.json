@@ -198,6 +198,12 @@
     "url": "/nodejs-npm/"
   },
   {
+    "id": "notion",
+    "name": "Notion API",
+    "icon": "notion.svg",
+    "url": "https://developers.notion.com/"
+  },
+  {
     "id": "nunjucks",
     "name": "Nunjucks",
     "icon": "nunjucks.svg",

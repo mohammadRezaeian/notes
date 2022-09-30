@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "How to build a website with Wordpress as backend and Gatsby as frontend"
+title: "Build a website with Wordpress and Gatsby"
 description: "Take the power of the blocks in the editor of Wordpress and the speed of a static website of GatsbyJS."
 tags: [Web Dev, Wordpress, GatsbyJS, Static Site Generators, CMS]
 toc: true

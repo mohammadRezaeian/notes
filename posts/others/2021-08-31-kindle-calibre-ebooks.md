@@ -13,7 +13,7 @@ My **personal note** for kindle devices. It contains mainly the "best for me" ap
 
 __Fact__: I use Kindle Oasis.
 
-👉🏻 [My reading list](/reading/).
+👉 [My reading list](/reading/).
 
 ## New ebook?
 
@@ -26,7 +26,7 @@ _Below way makes sure that your ebooks are in good format, stored and sync betwe
 5. Add to collection on [Amazon cloud](https://www.amazon.fr/hz/mycd/myx?ref=myk_mkmw_mig_FR#/home/content/pdocs/dateDsc/).
 6. Sync to Kindle device.
 
-## Using Calibre
+## Other tips with Calibre
 
 1. Choose a place to store ebooks, should be a cloud service like Dropbox or Google Drive (I used this) to use on different operation systems.
 2. **Auto search & download metadata & cover**: Choose book/books > Right click and choose _Edit metadata_ > _Download metadata and covers_ > Then verify and save.
