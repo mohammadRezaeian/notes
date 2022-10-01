@@ -1,119 +1,157 @@
 [
   {
     "name": "Blog",
-    "svg": "/img/cats/blog.svg",
+    "icon": "blog.svg",
     "fontello": "icon-feather",
-    "color": "#50c06a"
+    "color": "#50c06a",
+    "showInNoteToc": false,
+    "hideFromTopics": true
   },
   {
     "name": "Project-based Learning",
     "color": "#e97c8e",
-    "svg": "/img/cats/project.svg",
-    "fontello": "icon-project"
+    "icon": "project.svg",
+    "fontello": "icon-project",
+    "showInNoteToc": true
   },
   {
     "name": "MOOC",
     "color": "#fdcb6e",
-    "svg": "/img/cats/mooc.svg",
+    "icon": "mooc.svg",
     "fontello": "icon-mooc",
-    "fontello-solid": "icon-mooc"
+    "fontello-solid": "icon-mooc",
+    "showInNoteToc": true
   },
   {
     "name": "Machine Learning",
     "color": "#84f9ff",
-    "svg": "/img/cats/ml.svg",
-    "fontello": "icon-ml"
+    "icon": "ml.svg",
+    "fontello": "icon-ml",
+    "showInNoteToc": true
   },
   {
     "name": "Data Science",
     "color": "#b5ffb5",
-    "svg": "/img/cats/data-science.svg",
-    "fontello": "icon-data"
+    "icon": "data-science.svg",
+    "fontello": "icon-data",
+    "showInNoteToc": true
   },
   {
     "name": "Deep Learning",
     "color": "#fde193",
-    "svg": "/img/cats/dl.svg",
-    "fontello": "icon-dl"
+    "icon": "dl.svg",
+    "fontello": "icon-dl",
+    "showInNoteToc": true
   },
   {
     "name": "Time Series",
     "color": "#81ecec",
-    "svg": "/img/cats/ts.svg",
-    "fontello": "icon-ts"
+    "icon": "ts.svg",
+    "fontello": "icon-ts",
+    "showInNoteToc": true
   },
   {
     "name": "NLP",
     "color": "#eac1ea",
-    "svg": "/img/cats/nlp.svg",
-    "fontello": "icon-chatbot"
+    "icon": "nlp.svg",
+    "fontello": "icon-chatbot",
+    "showInNoteToc": true
   },
   {
     "name": "MLOps",
     "color": "#a0ffa0",
-    "svg": "/img/cats/mlops.svg",
-    "fontello": "icon-rocket"
+    "icon": "mlops.svg",
+    "fontello": "icon-rocket",
+    "showInNoteToc": true
   },
   {
     "name": "Python",
     "color": "#a0ffa0",
-    "svg": "/img/cats/python.svg",
-    "fontello": "icon-python"
+    "icon": "python.svg",
+    "fontello": "icon-python",
+    "showInNoteToc": true
   },
   {
     "name": "R Lang",
     "color": "#80beff",
-    "svg": "/img/cats/r.svg",
-    "fontello": "icon-r-lang"
+    "icon": "r.svg",
+    "fontello": "icon-r-lang",
+    "showInNoteToc": true
   },
   {
     "name": "Prob & Stats",
     "color": "#daff9f",
-    "svg": "/img/cats/stats.svg",
-    "fontello": "icon-stats"
+    "icon": "stats.svg",
+    "fontello": "icon-stats",
+    "showInNoteToc": true
   },
   {
-		"name": "Angular",
-		"color": "#C31C2F",
-		"svg": "/img/cats/ng.svg",
-    "fontello": "icon-ng"
-	},
+    "name": "Angular",
+    "color": "#C31C2F",
+    "icon": "ng.svg",
+    "fontello": "icon-ng",
+    "showInNoteToc": true
+  },
   {
     "name": "JavaScript",
-    "svg": "/img/cats/js.svg",
-    "fontello": "icon-js-solid"
+    "icon": "js.svg",
+    "fontello": "icon-js-solid",
+    "showInNoteToc": true
   },
   {
     "name": "Web Dev",
-    "svg": "/img/cats/web-dev.svg",
-    "fontello": "icon-web-dev"
+    "icon": "web-dev.svg",
+    "fontello": "icon-web-dev",
+    "showInNoteToc": true
   },
   {
     "name": "API & Services",
-    "svg": "/img/cats/api.svg",
-    "fontello": "icon-api"
+    "icon": "api.svg",
+    "fontello": "icon-api",
+    "showInNoteToc": true
   },
   {
     "name": "Algorithms",
-    "svg": "/img/cats/algo.svg",
-    "fontello": "icon-algo"
+    "icon": "algo.svg",
+    "fontello": "icon-algo",
+    "showInNoteToc": true
   },
   {
     "name": "Skills",
     "color": "#fda798",
-    "svg": "/img/cats/skills.svg",
-    "fontello": "icon-skill"
+    "icon": "skills.svg",
+    "fontello": "icon-skill",
+    "showInNoteToc": true
   },
   {
     "name": "Gaming & Puzzles",
     "color": "#fda798",
-    "svg": "/img/cats/games.svg",
-    "fontello": "icon-game"
+    "icon": "games.svg",
+    "fontello": "icon-game",
+    "showInNoteToc": true
   },
   {
     "name": "Others",
     "color": "#00cec9",
-    "svg": "/img/cats/others.svg",
-    "fontello": "icon-others-solid"
+    "icon": "others.svg",
+    "fontello": "icon-others-solid",
+    "showInNoteToc": true,
+    "hideFromTopics": true
+  },
+  {
+    "name": "11ty",
+    "icon": "11ty.jpg"
+  },
+  {
+    "name": "GatsbyJS",
+    "icon": "gatsbyjs.svg"
+  },
+  {
+    "name": "Docker",
+    "icon": "docker.svg"
+  },
+  {
+    "name": "Static Site Generators",
+    "icon": "ssg.svg"
   }
 ]
