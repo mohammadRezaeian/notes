@@ -153,5 +153,9 @@
   {
     "name": "Static Site Generators",
     "icon": "ssg.svg"
+  },
+  {
+    "name": "Testing",
+    "icon": "testing.svg"
   }
 ]

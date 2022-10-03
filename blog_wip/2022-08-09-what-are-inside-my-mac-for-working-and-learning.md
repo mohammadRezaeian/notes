@@ -2,7 +2,7 @@
 layout: blog
 title: "What are inside my Mac for working and learning?"
 description: "The settings and apps I use on my Mac to work and learn."
-tags: [Fresh Installation, MacOS]
+tags: [Skills, Fresh Installation, MacOS]
 toc: true
 math: false
 keywords: "application macos apps settings macbook"
