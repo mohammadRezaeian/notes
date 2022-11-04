@@ -9,7 +9,7 @@ keywords: "AIO all in one components post types boxes hide show hide/show linke 
 noOutdated: true
 notfull: false
 lowQuality: false
-date: 2022-10-02
+date: 2022-10-09
 ---
 
 This note is used to show the compoents I created to use in this site. It's for me only. I use it as a reference when I wanna create some components for the notes.
@@ -49,6 +49,11 @@ A paragraph
 ### Another inside heading
 
 Nothing inside.
+
+## Blockquotes
+
+> This is a blockquote.
+> Another line?
 
 ## List
 

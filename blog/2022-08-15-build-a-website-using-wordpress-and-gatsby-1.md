@@ -9,10 +9,13 @@ part: 1
 basePartUrl: build-a-website-using-wordpress-and-gatsby
 partName: "Foreword & Setting up"
 keywords: "math2it wordpress website ssg static site generator cms tailwind css bootstrap localwp local eslint vscode install installation prettier linter tsconfig config types typescript .env environement structure"
-date: 2022-09-12
+date: 2022-10-09
 ---
 
 This is a comprehensive post describing step-by-step how I rebuild [the Math2IT site](https://math2it.com/) using **[Wordpress](https://wordpress.org/)** as the backend (for the authors writing the blog posts) and displaying the content via **[Gatsby](https://gatsbyjs.com/)** (a Static Site Generator engine) via **GraphQL**. The styles are the same as in version 3, but instead of **Bootstrap** this time I am using **[TailwindCSS](https://tailwindcss.com/)**.
+
+> The final source code: https://github.com/dinhanhthi/wordpress-gatsby
+> The final demo site: https://wordpress-gatsby-demo.vercel.app
 
 ::: warning
 
@@ -427,7 +430,7 @@ And then,
 npm i -D prettier eslint-plugin-prettier eslint-config-react-app
 ```
 
-Open `.eslintrc.js` file and, add `'react-app'` to `extends` and add following rules ([more rules](https://eslint.org/docs/latest/rules/))
+Open `.eslintrc.js` file and, add `'react-app'` to `extends`, `'prettier'` to `plugins` and add following rules ([more rules](https://eslint.org/docs/latest/rules/))
 
 ::: hsbox Show rules
 

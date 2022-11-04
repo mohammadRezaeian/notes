@@ -5,7 +5,7 @@ tags: [Skills]
 toc: true
 icon: vsc.png
 keywords: "visual studio code vsc regex regular expression ssh remote server character combining font ligatures couple characters symbols letters new characters installation install extension plugin add extra path to auto complete reStructuredText rst markdown extension pythonremote regular expression regex vscode live server scss css compiler autopep8 formatter"
-date: 2022-09-29
+date: 2022-10-26
 ---
 
 ## Install
@@ -113,27 +113,19 @@ Course $1
 ```
 :::
 
-<div class="col-2-equal">
 
 ``` bash {% raw %}
 # Replace
 ::: col-2-equal
 content
 :::
-{% endraw %}
-```
 
-``` bash {% raw %}
 # with
 <div class="col-2-equal">
 
 content
 </div>
-{% endraw %}
-```
-</div>
 
-``` bash {% raw %}
 # In find box -> the key: [\s\S\r]*?
 ::: col-2-equal([\s\S\r]*?):::
 
@@ -304,6 +296,10 @@ In the current workspace > Go to "*Preferences*" > *Settings* > Click on tab "*W
 
 :::
 
+### Troubleshooting
+
+:eight_spoked_asterisk:  Show the verticle line for blocks (indentation guides): `"editor.guides.indentation": false,`
+
 ## Pylint
 
 ``` bash
@@ -364,19 +360,19 @@ If you wanna open terminal below the 2nd screen in the vertical split screen mod
 
 One can change the default keyboard shortcut by going to: **File** > **Preferences** > **Keyboard Shortcuts**.
 
-::: hsbox Show the list
-
 - Quick search file: [[Ctrl]] + [[P]].
 - Get back to previous views: [[Ctrl]] + [[Alt]] + [[-]] (Linux), [[Alt]] + [[<]] (Windows), [[Ctrl]] + [[-]] (MacOS).
 - Get forward: [[Ctrl]] + [[Shift]] + [[-]] (Linux), [[Alt]] + [[>]] (Windows), [[Ctrl]] + [[Shift]] + [[-]] (MacOS).
-- Open Command Palette: [[Ctrl]] + [[Shift]] + [[P]].
+- **Open Command Palette**: [[Ctrl]] + [[Shift]] + [[P]].
 - Go to line: [[Ctrl]] + [[Shift]] + [[P]] then _Go to line_.
-- Format entire doc: (Win/Linux) [[Ctrl]] + [[Shift]] + [[I]]; (Mac) [[⇧]] + [[⌥]] + [[F]].
-- Format selected text: (Win/Linux) [[Ctrl]] + [[K]] then [[K]] + [[F]]; (Mac) [[⌘]] + [[K]] then [[⌘]] + [[F]].
+- **Format document**:
+  - Format entire doc: (Win/Linux) [[Ctrl]] + [[Shift]] + [[I]]; (Mac) [[shift]] + [[option]] + [[F]].
+  - Format selected text: (Win/Linux) [[Ctrl]] + [[K]] then [[K]] + [[F]]; (Mac) [[cmd]] + [[K]] then [[cmd]] + [[F]].
 - Quickly move a line up/down: [[Alt]] + [[up]] / [[down]] (Mac).
 - Quickly duplicate current line: [[Shift]] + [[Alt]] + [[down]] (Mac).
-- Fold all: [[⌘]] + [[K]] then [[⌘]] + [[0]]
-- Fold level 2: [[⌘]] + [[K]] then [[⌘]] + [[2]]
-- Unfold all: [[⌘]] + [[K]] then [[⌘]] + [[J]]
-
-:::
+- **Fold**:
+  - Fold all: [[cmd]] + [[K]] then [[cmd]] + [[0]].
+  - Fold level 2: [[cmd]] + [[K]] then [[cmd]] + [[2]].
+  - Unfold all: [[cmd]] + [[K]] then [[cmd]] + [[J]].
+  - Toggle fold at the current position of the cursor: [[cmd]] + [[K]] then [[cmd]] + [[L]].
+- Show all references: [[shift]] + [[option]] + [[F12]]

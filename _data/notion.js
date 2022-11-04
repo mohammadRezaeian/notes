@@ -1,5 +1,5 @@
 const EleventyFetch = require("@11ty/eleventy-fetch");
-const { get } = require("lodash");
+const { get, uniq } = require("lodash");
 require("dotenv").config();
 
 module.exports = async function () {
@@ -64,7 +64,7 @@ function transformData(data, type) {
     const tags = get(post, "properties.11ty-tags.multi_select", []).map(
       (tag) => tag.name
     );
-    const finalTags = [...category, ...tags];
+    const finalTags = uniq([...category, ...tags]);
     const private = get(post, "properties.11ty-private.checkbox", false);
     const originalUrl = get(post, "url", "");
     const url = private

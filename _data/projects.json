@@ -1,18 +1,19 @@
 [
   {
+    "title": "wordpress-gatsby",
+    "icon": "🎒",
+    "description": "Build a Gatsby site using source from Wordpress.",
+    "source": "https://github.com/dinhanhthi/wordpress-gatsby",
+    "url": "https://dinhanhthi.com/build-a-website-using-wordpress-and-gatsby-1/",
+    "tech": ["bash", "gatsby", "git", "graphql", "js", "php", "postman", "python", "react", "scss", "tailwindcss", "ts", "wordpress"]
+  },
+  {
     "title": "dinhanhthi.com",
     "icon": "⭐",
     "description": "11ty theme. Current version of my personal website.",
     "source": "https://github.com/dinhanhthi/dinhanhthi.com",
     "url": "http://dinhanhthi.com",
     "tech": ["eleventy", "git", "html5", "js", "liquid", "nodejs", "notion", "nunjucks", "postman", "scss", "vscode"]
-  },
-  {
-    "title": "math2it-wordpress-gatsby",
-    "description": "An attemp to migrate a wordpress site to gatsby",
-    "source": "https://github.com/dinhanhthi/math2it-egg",
-    "icon": "🥚",
-    "tech": ["bash", "gatsby", "git", "graphql", "js", "php", "postman", "python", "react", "scss", "tailwindcss", "ts", "wordpress"]
   },
   {
     "title": "dinhanhthi.com-v4 in gatsby",

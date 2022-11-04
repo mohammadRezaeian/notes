@@ -157,5 +157,9 @@
   {
     "name": "Testing",
     "icon": "testing.svg"
+  },
+  {
+    "name": "Wordpress",
+    "icon": "wordpress.svg"
   }
 ]

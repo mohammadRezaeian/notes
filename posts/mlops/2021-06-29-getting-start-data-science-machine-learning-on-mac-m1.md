@@ -5,7 +5,7 @@ tags: [MLOps, Data Science, Machine Learning, Deep Learning]
 toc: true
 icon: macos_ml.png
 keywords: "data science machine learning tensorflow deep learning mac m1 macos apple getting start installation python pip package docker images arm chip max m1max m1pro pro"
-date: 2022-03-22
+date: 2022-10-19
 ---
 
 This is my personal list of to-do things for a new Macbook.
@@ -201,6 +201,16 @@ model.fit(
 ```
 
 :::
+
+## Troubleshooting
+
+✳️ _RuntimeError: module compiled against API version 0x10 but this version of numpy is 0xe_
+
+```bash
+pip install numpy --upgrade
+```
+
+
 
 ## References
 

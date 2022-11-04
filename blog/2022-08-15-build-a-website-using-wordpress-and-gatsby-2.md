@@ -9,10 +9,13 @@ part: 2
 basePartUrl: build-a-website-using-wordpress-and-gatsby
 partName: Building the components
 keywords: "math2it wordpress website ssg static site generator cms tailwind css fontello packages components navigation taxonomy category tag pages individual post template layout styling popular latest random table of content toc comment system images external images graphql troubleshooting search"
-date: 2022-09-20
+date: 2022-10-09
 ---
 
 In this part we will learn in detail how to use Gatsby to create components for a website and take the data for each component from Wordpress.
+
+> The final source code: https://github.com/dinhanhthi/wordpress-gatsby
+> The final demo site: https://wordpress-gatsby-demo.vercel.app
 
 ## Getting started to style your site
 
@@ -1386,13 +1389,31 @@ function doesNodeContainsTag(node: any, tag: string): number {
 
 :::
 
-
-
 ## Comment system
 
 For a comment system you need "two-way" directions". One direction is to retrieve all comments from the WP database and the other direction is to publish a new comment to the WP database. The former is easy via the GraphQL with the query `allWpComment` or `WpComment` (see http://localhost:8000/___graphql), just like `WpPost`. The latter is  more difficult. In this post, I have not found a solution yet ([let me know](mailto:me@dinhanhthi.com) if you have one).
 
 Another option for you is to use comment systems for static websites. You can find a list of comment systems in [the Gatsby documentation](https://www.gatsbyjs.com/docs/how-to/adding-common-features/adding-comments/).
+
+
+
+## Deployment
+
+The "incremental build" = every time you update your website (both styles and WP content), the website automatically detects this and rebuilds it. The special thing about this is that the website only rebuilds the parts of the website that have changed.
+
+As far as I know, the only way to deploy the site in the "incremental build" style is to use **[Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/)**, which is not free.
+
+::: tip
+
+If you want a free version of "incremental build", consider **[Next.JS](https://nextjs.org/)** (another React SSG framework)
+
+:::
+
+One idea for you is to build your site locally and upload the created folder to Github. Then use a service like [**Netlify**](https://www.netlify.com/) or **[Vercel](https://vercel.com/)** to freely host your site. ==I prefer Vercel with more bandwidth and build time for free tiers==.
+
+If you want to reduce the size of your WP site and also optimize it, read [this note](/wordpress-cleanup-and-optimize/).
+
+
 
 ## Useful GraphQL queries
 

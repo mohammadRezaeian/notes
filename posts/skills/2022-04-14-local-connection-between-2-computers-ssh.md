@@ -5,7 +5,7 @@ tags: [Skills, Linux, Shell]
 toc: false
 icon: lan.svg
 keywords: "ssh connection 2 computer local LAN open server terminal nomachine no machine"
-date: 2022-08-20
+date: 2022-10-20
 ---
 
 
@@ -96,10 +96,12 @@ exit
 
 ```bash
 # From client to remote
-scp thi@pop-os.local:/home/thi/Downloads/file.pdf .
+scp /from/client/file.zip thi@pop-os.local:/on/remote/
+# (change the destination name)
+scp /on/client/file.zip thi@pop-os.local:/on/remote/file_renamed.zip
 
 # From remote to client
-scp file.pdf thi@pop-os.local:/home/thi/Downloads/
+scp thi@pop-os.local:/on/remote/file.zip /on/client/
 ```
 
 **Tip**: You can use a smtp client (eg: [CyberDuck](https://cyberduck.io/)) to make things visually

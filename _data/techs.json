@@ -192,6 +192,12 @@
     "url": "https://nestjs.com/"
   },
   {
+    "id": "nextjs",
+    "name": "Next.js",
+    "icon": "nextjs.svg",
+    "url": "https://nextjs.org/"
+  },
+  {
     "id": "nodejs",
     "name": "NodeJS",
     "icon": "node.svg",

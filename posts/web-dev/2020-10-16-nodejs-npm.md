@@ -6,7 +6,7 @@ toc: true
 icon: nodejs.png
 notfull: 1
 keywords: "js javascript package management Node Manager npm nvm node nodejs yarn js cli env environment"
-date: 2022-09-13
+date: 2022-10-27
 ---
 
 {% assign img-url = '/img/post/js/gatsby' %}
@@ -111,7 +111,7 @@ node -v
 - `ls`: `list`
 </div>
 
-## Install package
+## Install packages
 
 👉 [Official documentation](https://docs.npmjs.com/cli/install#:~:text=Install%20the%20dependencies%20in%20the,json%20.).
 
@@ -173,7 +173,7 @@ npm view package_name version
 npm config set python python2
 ```
 
-## Update package
+## Update packages
 
 ::: col-2-equal
 ``` bash
@@ -190,10 +190,24 @@ npm update package_name # -g for global
 ```
 :::
 
-## Remove package
+## Remove packages
 
 ``` bash
 npm uninstall package
+```
+
+## Update package.json (npm version)
+
+👉 [Semantic Versioning 2.0.0 | Semantic Versioning](https://semver.org/)
+👉 [npm-version | npm Docs](https://docs.npmjs.com/cli/v8/commands/npm-version)
+
+```bash
+# Version: 1.2.3
+# means: breaking.feature.fix
+
+npm version patch # 1.0.0 -> 1.0.1 (fixes)
+npm version minor # 1.0.1 -> 1.1.0 (new features )
+npm version major # 1.1.0 -> 2.0.0 (completely new APIs)
 ```
 
 ## Run scritps

@@ -5,7 +5,7 @@ tags: [Python]
 toc: true
 icon: "/img/about/python.svg"
 keywords: "windows linux mac anaconda pip jupyter notebook activate base ubuntu install new packages conda env environement revision ImportError ssl error ssh module _ssl TLS/SSL check version update pip upgrade pip AttributeError: 'NoneType' object UnicodeDecodeError: 'ascii' codec conda: The following packages are not available from current channels freetype (from matplotlib) dtaidistance: C-library is not available"
-date: 2021-11-02
+date: 2022-10-19
 ---
 
 ## Windows
@@ -414,9 +414,13 @@ source activate base # on MacOS
 
 ### Install packages with conda
 
+::: tip
+
 👌 **Fact**: Activate an environment conda, use its `pip` to install any package.
 
-{% hsbox "Like using `conda`?" %}
+:::
+
+{% hsbox "But you can use `conda` command to install package too" %}
 
 ~~~ bash
 # INSTALL
@@ -461,7 +465,7 @@ conda install --file requirements.txt
 ```
 {% endhsbox %}
 
-### Environment
+### Conda's environements
 
 👉 Check an [official doc](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) or [this useful post](https://towardsdatascience.com/a-guide-to-conda-environments-bc6180fc533).
 
@@ -546,9 +550,16 @@ conda env list
 ~~~
 
 ~~~ bash
-# EXPORT TO A ENV FILE
+# EXPORT env list TO A ENV FILE
 conda env export -f <file>.yml
 ~~~
+```bash
+# Rename an env (conda >= 4.14)
+conda rename -n old_name -d new_name
+```
+
+
+
 </div>
 
 ~~~ bash
@@ -572,6 +583,12 @@ conda config --set changeps1 false
 ```
 
 {% endhsbox %}
+
+::: info
+
+We cannot change the **default environment** in conda!
+
+:::
 
 ### Kernel 2 & 3 for Jupyter Notebook
 
