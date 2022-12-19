@@ -5,7 +5,7 @@ tags: [Others, Fresh Installation, MacOS, Collection]
 toc: true
 icon: macos.svg
 keywords: "install new macbook setting up applications command line zsh terminal nodejs python brew shortcut cask nodejs node zsh oh-my-zsh xcode bitwarden XCodes dark mode canon printer mg2900"
-date: 2022-09-29
+date: 2022-11-24
 ---
 
 This is my personal list of to-do things for a new Macbook.
@@ -169,9 +169,11 @@ defaults write com.apple.QuickTimePlayerX NSQuitAlwaysKeepsWindows -bool false
 - **DictBox** -- dictionary.
 - **Horo** -- Timer for Mac.
 - **Magnet** -- arrange window workspace (stick to edge like on Windows).
+- **[Mini Time Tracker](https://menegay.org/mini-time-tracker/)** -- Minimalistic menubar stopwatch.
 - **Skitch** -- annotation for photos on Mac.
 - **TaskTab** -- List of tasks right on menu bar.
 - **TickTick** -- task manager.
+- **Tile Photo FX - Slice & Puzzle** -- Add grid to photos.
 - **The Unarchiver**
 - **Word** and **Powerpoint** (in Office 365 suit, paid). You can buy a lifetime license on ebay (not your own email but you can integrate yours later).
 - **Yomu** -- ebook reader.
@@ -312,7 +314,7 @@ Using Sidecar feature to turn your ipad to an external screen. It ==works normal
    - _Not working_: mac - hub - ipad.
    - _Working_: mac - hub - usb doc - ipad
 
-### FPT connection problem
+### FTP connection problem
 
 If you have any problem with the connection, like *The share does not exist on the server. Please check the share name, and then try again.*, make sure the password doesn't contain `@`! ([Source](https://apple.stackexchange.com/questions/110965/connect-to-ftp-server-in-finder-not-working))
 

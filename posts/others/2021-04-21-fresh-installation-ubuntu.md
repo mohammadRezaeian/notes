@@ -27,11 +27,11 @@ Most of commands are for both Ubuntu and Pop!\_OS, there are some which are only
 
 1. Download [Ubuntu ISO](https://ubuntu.com/download/desktop). If you like a MacOS-like version, you can choose [Elementary OS](https://elementary.io/).
 
-2. Using [Rufus](https://rufus.ie/) (on Windows) or [Etcher](https://www.balena.io/etcher/) (on any system, **recommended**) or [popsicle](https://github.com/pop-os/popsicle) (usb flasher, on pop!\_os) to create a bootable USB drives.
+2. Using [Rufus](https://rufus.ie/) (on Windows) or [Etcher](https://www.balena.io/etcher/) (on any system, **recommended**) or [popsicle](https://github.com/pop-os/popsicle) (usb flasher, on pop!\_os) to create a bootable USB driver.
 
 3. **[Pop!\_OS]** Download [Pop!\_OS](https://pop.system76.com/) (with NVIDIA)
    1. (**Update 05 Jun 2021** - **IMPORTANT**) If you're using DisplayLink Dock (more than 1 external screens, Pop!\_OS doesn't work with the DisplayLink Driver 5.4 but it works for Ubuntu 20.04). So, you have no choice to **use Ubuntu instead of Pop!\_OS**!!!! [Read more](https://www.reddit.com/r/pop_os/comments/mok7mf/fresh_pop_os_install_installed_displaylink/).
-   2. Choose custom partition while installing > use at least 2 partitions for the installing (1 which is main for **Root** `/` and one which is ~500MB for **Boot** `/boot/etc`)
+   2. Choose a custom partition while installing > use at least 2 partitions for the installing (1 which is main for **Root** `/` and one which is ~500MB for **Boot** `/boot/etc`)
 
 4. Update & Upgrade
 

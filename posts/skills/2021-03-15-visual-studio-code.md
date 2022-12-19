@@ -5,7 +5,7 @@ tags: [Skills]
 toc: true
 icon: vsc.png
 keywords: "visual studio code vsc regex regular expression ssh remote server character combining font ligatures couple characters symbols letters new characters installation install extension plugin add extra path to auto complete reStructuredText rst markdown extension pythonremote regular expression regex vscode live server scss css compiler autopep8 formatter"
-date: 2022-10-26
+date: 2022-11-14
 ---
 
 ## Install
@@ -296,7 +296,7 @@ In the current workspace > Go to "*Preferences*" > *Settings* > Click on tab "*W
 
 :::
 
-### Troubleshooting
+### Other settings
 
 :eight_spoked_asterisk:  Show the verticle line for blocks (indentation guides): `"editor.guides.indentation": false,`
 
@@ -321,6 +321,17 @@ ln -s /home/thi/git/dataswati/python-dataswati/popai /home/thi/miniconda3/envs/p
         "/app/src/python/"
         # or other paths you want!
     ]
+}
+```
+
+:eight_spoked_asterisk: Disable tslint
+
+```json
+{
+  "settings": {
+    "typescript.validate.enable": false,
+    "javascript.validate.enable": false
+  }
 }
 ```
 
@@ -370,9 +381,10 @@ One can change the default keyboard shortcut by going to: **File** > **Preferenc
   - Format selected text: (Win/Linux) [[Ctrl]] + [[K]] then [[K]] + [[F]]; (Mac) [[cmd]] + [[K]] then [[cmd]] + [[F]].
 - Quickly move a line up/down: [[Alt]] + [[up]] / [[down]] (Mac).
 - Quickly duplicate current line: [[Shift]] + [[Alt]] + [[down]] (Mac).
-- **Fold**:
+- **Fold**: 👉 Using [something like](https://code.visualstudio.com/docs/editor/codebasics#_folding) `//#region ... //#endregion` for a region.
   - Fold all: [[cmd]] + [[K]] then [[cmd]] + [[0]].
   - Fold level 2: [[cmd]] + [[K]] then [[cmd]] + [[2]].
   - Unfold all: [[cmd]] + [[K]] then [[cmd]] + [[J]].
   - Toggle fold at the current position of the cursor: [[cmd]] + [[K]] then [[cmd]] + [[L]].
+  - Toggle all `#region`: [[cmd]] + [[K]] then [[cmd]] + [[8]] (close) / [[9]] (open)
 - Show all references: [[shift]] + [[option]] + [[F12]]

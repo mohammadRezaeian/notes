@@ -4,7 +4,7 @@ title: "Next.js & Wordpress"
 tags: ["Web Dev", "Wordpress", "Static Site Generators", "CMS"]
 toc: true
 icon: nextjs.png
-date: 2022-11-02
+date: 2022-11-14
 keywords: "SSG next js vercel wordpress incremental building host fast website graphql query image sharp placeholder blur request"
 ---
 
@@ -268,9 +268,38 @@ In `.prettierrc`,
 }
 ```
 
+## Check ESLint server
 
+There are some rules taking longer than the others. Use below command to see who they are.
+
+```bash
+TIMING=1 npx eslint lib
+Rule                                   | Time (ms) | Relative
+:--------------------------------------|----------:|--------:
+tailwindcss/no-custom-classname        |  6573.680 |    91.0%
+prettier/prettier                      |   543.009 |     7.5%
+```
+
+If you wanna turn off some rules (check [more options](https://eslint.org/docs/latest/user-guide/configuring/rules#disabling-rules)),
+
+```js
+// .eslintrc.js
+{
+  rules: {
+    'tailwindcss/no-custom-classname': 'off'
+  }
+}
+```
+
+Run `TIMING=1 npx eslint lib` again to check!
 
 ## Types for GraphQL queries
+
+::: warning
+
+**Update**: I decide to use self-defined types for what I use in the project.
+
+:::
 
 We use [GraphQL Code Generator](https://www.the-guild.dev/graphql/codegen) (or *codegen*). Read [the official doc](https://www.the-guild.dev/graphql/codegen/docs/getting-started/installation).
 
@@ -533,7 +562,7 @@ Inside an `<a>` tag?
 
 I use below codes,
 
-(To apply ["blur" placeholder effect](https://nextjs.org/docs/api-reference/next/image#placeholder) for external images, we use [placeholder](https://plaiceholder.co/usage))
+(To apply ["blur" placeholder effect](https://nextjs.org/docs/api-reference/next/image#placeholder) for external images, we use [plaiceholder](https://plaiceholder.co/usage))
 
 ```tsx
 // External images
@@ -558,9 +587,63 @@ I use below codes,
 />
 ```
 
+::: warning
+
+- If you use `fill={true}` for `Image`, its parent must have position "relative" or "fixed" or "absolute"!
+- If you use *plaiceholder*, the building time takes longer than usual. For my site, after applying *plaiceholder*, the building time increases from *1m30s* to *2m30s* on vercel!
+
+:::
+
 :beetle: _Invalid next.config.js options detected: The value at .images.remotePatterns[0].port must be 1 character or more but it was 0 characters._
 
 Remove `port: ''`!
+
+## Loading placeholder div for images
+
+::: tip
+
+We use only the CSS for the placeholder image. We gain the loading time and also the building time for this idea!
+
+:::
+
+If you wanna add a div (with loading effect CSS only).
+
+```tsx
+// In the component containing <Image>
+import Image from 'next/image'
+import { useState } from 'react'
+
+export default function ImageForPost({ title, featuredImage, blurDataURL, categories }) {
+  const [isImageReady, setIsImageReady] = useState(false)
+  const onLoadCallBack = () => {
+    setIsImageReady(true)
+  }
+  const image = (
+  	<Image
+      alt={imageAlt}
+      src={externalImgSrc}
+      className={imageClassName}
+      fill={true}
+      sizes={externalImgSizes || '100vw'}
+      onLoadingComplete={onLoadCallBack}
+    />
+  )
+  return (
+  	<>
+      <div className="block h-full w-full md:animate-fadeIn">{image}</div>
+    	{!isImageReady && (
+        <div className="absolute top-0 left-0 h-full w-full">
+          <div className="relative h-full w-full animate-pulse rounded-lg bg-slate-200">
+            <div className="absolute left-[14%] top-[30%] z-20 aspect-square h-[40%] rounded-full bg-slate-300"></div>
+            <div className="absolute bottom-0 left-0 z-10 h-2/5 w-full bg-wave"></div>
+          </div>
+        </div>
+  		)}	
+    </>
+}
+```
+
+
 
 ## Custom fonts
 
@@ -873,7 +956,18 @@ There are some `Link`s getting `href` an `undefined`. Find and fix them or use,
 <Link href={value ?? ''}>...</Link>
 ```
 
+✳️ Restore to the previous position of the page when clicking the back button (Scroll Restoration)
 
+```js
+// next.config.js
+module.exports = {
+	experimental: {
+    scrollRestoration: true,
+  },
+}
+```
+
+**Remark**: You have to restart the dev server.
 
 
 
@@ -882,3 +976,4 @@ There are some `Link`s getting `href` an `undefined`. Find and fix them or use,
 - [Incremental Static Regeneration (ISR) – Vercel Docs](https://vercel.com/docs/concepts/incremental-static-regeneration/overview#on-demand-revalidation)
 - [How to Update Static Content in Next.js Automatically with Incremental Static Regeneration (ISR) - Space Jelly](https://spacejelly.dev/posts/how-to-update-static-content-in-next-js-automatically-with-incremental-static-regeneration-isr)
 - [On-Demand ISR – Vercel](https://vercel.com/templates/next.js/on-demand-incremental-static-regeneration)
+- [Debugging](https://nextjs.org/docs/advanced-features/debugging)
