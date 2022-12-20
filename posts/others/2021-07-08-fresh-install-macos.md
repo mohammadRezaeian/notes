@@ -5,7 +5,7 @@ tags: [Others, Fresh Installation, MacOS, Collection]
 toc: true
 icon: macos.svg
 keywords: "install new macbook setting up applications command line zsh terminal nodejs python brew shortcut cask nodejs node zsh oh-my-zsh xcode bitwarden XCodes dark mode canon printer mg2900"
-date: 2022-11-24
+date: 2022-12-20
 ---
 
 This is my personal list of to-do things for a new Macbook.
@@ -105,6 +105,8 @@ defaults write com.apple.QuickTimePlayerX NSQuitAlwaysKeepsWindows -bool false
 
 👉 Note: [Screen recording on MacOS](/screen-recording-on-macos/).
 
+For creating a gif, use GIPHY Capture (download from App Store).
+
 ## **Dictionary**
 
 - [Install Viettien](https://mega.nz/file/x0RgTbhK#1rz1mpsbXXxLmLs1blVk9zLEmI0d5FXk7Bora4Rm9Y0) (I use version 5.0b for Mac Big Sur chip M1). Alternative dictionaries can be downloaded from this link (I backed it up for personally using).
@@ -167,6 +169,7 @@ defaults write com.apple.QuickTimePlayerX NSQuitAlwaysKeepsWindows -bool false
 - **Bitwarden** -- need to install desktop application to enable fingerprint unlock for browser extension. Restart both application and follow the instruction on extension to enable this feature.
 - **Communication**: Whatsapp Desktop + Messenger App.
 - **DictBox** -- dictionary.
+- **GIPHY Capture** -- screen record as a gif.
 - **Horo** -- Timer for Mac.
 - **Magnet** -- arrange window workspace (stick to edge like on Windows).
 - **[Mini Time Tracker](https://menegay.org/mini-time-tracker/)** -- Minimalistic menubar stopwatch.
