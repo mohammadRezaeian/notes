@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Next.js & Wordpress"
-tags: ["Web Dev", "Wordpress", "Static Site Generators", "CMS"]
+tags: ["Web Dev", "Wordpress", "Static Site Generators", "CMS", Next.js]
 toc: true
 icon: nextjs.png
 date: 2022-11-14

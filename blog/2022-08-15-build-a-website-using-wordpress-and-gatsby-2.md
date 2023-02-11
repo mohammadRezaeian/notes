@@ -15,7 +15,6 @@ date: 2022-10-09
 In this part we will learn in detail how to use Gatsby to create components for a website and take the data for each component from Wordpress.
 
 > The final source code: https://github.com/dinhanhthi/wordpress-gatsby
-> The final demo site: https://wordpress-gatsby-demo.vercel.app
 
 ## Getting started to style your site
 

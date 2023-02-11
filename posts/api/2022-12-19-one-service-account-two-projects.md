@@ -2,7 +2,7 @@
 layout: post
 title: "Using one service account for multiple GCP projects"
 tags: [API & Services, MLOps, Google]
-toc: true
+toc: false
 icon: gcp.svg
 keywords: "google apis projects service accounts"
 ---
@@ -11,7 +11,7 @@ We want to use a service account (SA) of a project to manage this project and ot
 
 ## Create projects
 
-Go to [`console.cloud.google.com/cloud-resource-manager`](https://console.cloud.google.com/cloud-resource-manager) to add projects we want, let's say `aa-test-one`, `aa-test-two` and `aa-test-three`. 
+Go to [`console.cloud.google.com/cloud-resource-manager`](https://console.cloud.google.com/cloud-resource-manager) to add projects we want, let's say `aa-test-one`, `aa-test-two` and `aa-test-three`.
 
 
 

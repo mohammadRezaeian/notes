@@ -47,7 +47,6 @@ module.exports = async function () {
   jsonAI = transformData(jsonAI.results, "ai");
 
   const json = [...jsonWeb, ...jsonAI];
-  // console.log(JSON.stringify(json, null, 2));
 
   return {
     json,

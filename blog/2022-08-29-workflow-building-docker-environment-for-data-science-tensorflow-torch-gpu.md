@@ -71,21 +71,21 @@ Yes, you don't have to read other sections, just this one for everything run!
    ```bash
    # Create the image "img_sample" from the file "Dockerfile"
    docker build -t img_sample . -f Dockerfile
-   
+
    # Create and run a container from the image "img_sample"
    docker run --name container_sample --gpus all -w="/working" img_sample bash
-   
+
    # Enter the "container_sample" container
    docker exect -it container_sample bash
-   
+
    # In the container "container_sample"
-   
+
    # Check if the NVIDIA Driver is recognized
    nvidia-smi
-   
+
    # Check the version of CUDA
    nvcc --version
-   
+
    # Check the version of cuDNN
    cat /usr/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
    ```
@@ -122,12 +122,12 @@ Yes, you don't have to read other sections, just this one for everything run!
    RUN python3 -m pip install --upgrade pip && \
        python3 -m pip install -r requirements.txt
    COPY . .
-   
+
    # Install and setup Zsh to replace the default "bash"
    RUN apt-get install -y zsh && apt-get install -y curl
    RUN PATH="$PATH:/usr/bin/zsh"
    RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-   
+
    # Install OpenSSH
    RUN apt-get install -y openssh-server
    RUN mkdir /var/run/sshd
@@ -196,19 +196,19 @@ So, if you find that [the versions of TF, CUDA and cudnn](https://www.tensorflow
    ```bash
    # GPU driver
    nvidia-smi
-   
+
    # CUDA version
    nvcc --version
-   
+
    # cuDNN version
    cat /usr/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
-   
+
    # TensorFlow works with CPU?
    python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
-   
+
    # TensorFlow works with GPU?
    python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
-   
+
    # Torch works with GPU?
    python3 -c "import torch; print(torch.cuda.is_available())"
    ```
@@ -218,7 +218,7 @@ So, if you find that [the versions of TF, CUDA and cudnn](https://www.tensorflow
    ```bash
    # First run the ssh server in the container first
    docker exec container_ai $(which sshd) -Ddp 22
-   
+
    # Access it via
    ssh -p 6789 root@localhost
    # password of root: qwerty

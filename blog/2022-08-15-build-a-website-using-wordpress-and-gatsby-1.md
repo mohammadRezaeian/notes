@@ -15,7 +15,6 @@ date: 2022-10-09
 This is a comprehensive post describing step-by-step how I rebuild [the Math2IT site](https://math2it.com/) using **[Wordpress](https://wordpress.org/)** as the backend (for the authors writing the blog posts) and displaying the content via **[Gatsby](https://gatsbyjs.com/)** (a Static Site Generator engine) via **GraphQL**. The styles are the same as in version 3, but instead of **Bootstrap** this time I am using **[TailwindCSS](https://tailwindcss.com/)**.
 
 > The final source code: https://github.com/dinhanhthi/wordpress-gatsby
-> The final demo site: https://wordpress-gatsby-demo.vercel.app
 
 ::: warning
 

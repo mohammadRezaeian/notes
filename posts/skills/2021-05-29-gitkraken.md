@@ -57,6 +57,8 @@ Suppose that we work with `me@dinhanhthi.com` (personal) and `thi@ideta.io` (wor
 3. In the **Integrations** tab, link to the files created in previous step.
 4. Clone projects by ssh url instead.
 
+✳️ **thi-ideta** wants to push to **dinhanhthi** on some repo, besides add thi-ideta's public key to the SSH, dinhanhthi must add thi-ideta to the "Collaborators" of that repo!
+
 ## References
 
 - [Gitkraken cheat sheet](https://www.gitkraken.com/downloads/gitkraken-git-gui-cheat-sheet.pdf).

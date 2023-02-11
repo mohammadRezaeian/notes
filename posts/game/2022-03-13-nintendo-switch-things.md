@@ -20,7 +20,7 @@ These are my personal notes and experiences with Switch. If you find something w
 3. You cannot transfer data from one user to another user! However, you can transfer data between consoles, between consoles and server. In other words, the save state is bound to the user.
 4. You should buy games with different accoutns in case you want to sell them later.
 5. Don't buy a big bag (used for both switch and dock), just buy the bag for switch (and its small accessories). When you go somewhere, don't take with you the dock, just the switch with an adapter (which has the same function as the dock).
-6. You credit card / paypal account must have the same country as the country you are using on your nintendo account. In this case, use eShop cards. Buy them on amazon or [eneba](https://www.eneba.com/).
+6. Your credit card / paypal account must have the same country as the country you are using on your nintendo account. In this case, use eShop cards. Buy them on amazon or [eneba](https://www.eneba.com/).
 
 ## Useful links
 
@@ -38,7 +38,7 @@ These are my personal notes and experiences with Switch. If you find something w
 What you both can do:
 
 1. Play the same game at the same time.
-2. Data is saved opn your own accounts (your account is A, your friend's is B).
+2. Data is saved upon your own accounts (your account is A, your friend's is B).
 3. If you both subscribe to nintendo online service, you can play together.
 
 ## Games I like

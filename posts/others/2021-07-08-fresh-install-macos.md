@@ -5,7 +5,7 @@ tags: [Others, Fresh Installation, MacOS, Collection]
 toc: true
 icon: macos.svg
 keywords: "install new macbook setting up applications command line zsh terminal nodejs python brew shortcut cask nodejs node zsh oh-my-zsh xcode bitwarden XCodes dark mode canon printer mg2900"
-date: 2022-12-20
+date: 2023-01-02
 ---
 
 This is my personal list of to-do things for a new Macbook.
@@ -135,7 +135,9 @@ For creating a gif, use GIPHY Capture (download from App Store).
 - ~~[Google Chrome](https://www.google.com/chrome/) and sign in to sync~~. **I'm using [Brave](https://brave.com/)** (chromium-based engine also)
   1. Disable Tab Hover Cards: navigate to `chrome://flags/`, search for "tab hover" and choose "Disable".
   2. Add a site to use cookies (enable third-party cookies for downloading files on Google Drive): Go to `chrome://settings/cookies` and then "Add" `drive.google.com` (tick on third-party...) in "Sites that can always use cookies" section.
-  3. Custom keyboard shortcut: System Preferences > Keyboard > Shortcuts > Application Shortcuts > "+" > Choose Chrome > Type the name EXACTLY THE SAME as the name in menu (for example "Inspect elements") > Add a custom shortcut.
+  3. **Custom keyboard shortcut**: System Preferences > Keyboard > Shortcuts > Application Shortcuts > "+" > Choose Brave > Type the name EXACTLY THE SAME as the name in menu (for example "Inspect elements") > Add a custom shortcut. **Remark**: it's not working with Chrome.
+  4. Use `defaults write com.google.Chrome NSRequiresAquaSystemAppearance -bool YES` to force Chrome to use light mode.
+  5. **Cannot share screen with Chrome** (eg. in Google Meet): follow [this guide](https://apple.stackexchange.com/a/438636).
 - [iTerm2](https://iterm2.com/) (check more in other section). This is for a sticky terminal (after some configs). An alternative which is really beautiful is [Hyper](https://hyper.is/).
 - [Itsycal](https://www.mowglii.com/itsycal/) -- a dropdown calendar with agenda. After installing, you have to choose manually the agenda profiles you wanna show.
 - [Mojibar](https://github.com/muan/mojibar) - emoji indicator on menu bar. Install via `brew install mojibar`. Using [[⌃]] + [[⇧]] + [[⎵]] to open the window. A paid option is [Mumu](https://getmumu.com/) (20$). After install, press [[cmd]] + [[,]] to open preferences and then choose Skin tone to "None" (for me only).
