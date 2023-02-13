@@ -1,5 +1,12 @@
 [
   {
+    "title": "chrome-extension-ts-starter",
+    "icon": "🚙",
+    "description": "A starter for developing a Chrome Extension with TypeScript (only, without React) + Webpack + TailwindCSS + ESLint + Prettier.",
+    "source": "https://github.com/dinhanhthi/chrome-extension-ts-starter",
+    "tech": ["js", "scss", "tailwindcss", "ts"]
+  },
+  {
     "title": "wordpress-gatsby",
     "icon": "🎒",
     "description": "Build a Gatsby site using source from Wordpress.",
