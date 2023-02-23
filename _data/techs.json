@@ -24,6 +24,12 @@
     "url": "https://getbootstrap.com/"
   },
   {
+    "id": "chrome-extension",
+    "name": "Chrome Extension API",
+    "icon": "chrome.svg",
+    "url": "https://developer.chrome.com/"
+  },
+  {
     "id": "detectron2",
     "name": "Detectron2",
     "icon": "detectron2.png",
@@ -154,6 +160,12 @@
     "name": "LaTeX",
     "icon": "latex.svg",
     "url": "https://www.latex-project.org/"
+  },
+  {
+    "id": "linkedin",
+    "name": "LinkedIn API",
+    "icon": "linkedin.svg",
+    "url": "https://developer.linkedin.com/"
   },
   {
     "id": "linux",

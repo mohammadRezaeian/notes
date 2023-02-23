@@ -7,7 +7,7 @@
         "bgwhite": false,
         "logo": "ideta-single.png",
         "url": "https://www.ideta.io",
-        "title": "Web Developer & Data Scientist",
+        "title": "Data Scientist & Fullstack Developer",
         "date": "2021 — ongoing",
         "activity": [
           "Ideta is a solution that allows companies to very easily create conversational assistants for many communication channels like Messenger, SMS, Slack, Wechat, Skype Business, ... but also for voice like Google Home. The solution makes the creation of chatbots accessible to everyone.",
@@ -16,6 +16,7 @@
         "tech": [
           "angular",
           "bash",
+          "chrome-extension",
           "detectron2",
           "dialogflow",
           "docker",
@@ -27,6 +28,7 @@
           "js",
           "jestjs",
           "jupyter",
+          "linkedin",
           "linux",
           "mongodb",
           "nestjs",
