@@ -97,7 +97,7 @@
   },
   {
     "id": "google-nodejs-api",
-    "name": "NodeJS API",
+    "name": "Google API",
     "icon": "google-nodejs-api.svg",
     "url": "/google-dialogflow-api/"
   },
@@ -226,6 +226,12 @@
     "name": "Nunjucks",
     "icon": "nunjucks.svg",
     "url": "/11ty-nunjucks/"
+  },
+  {
+    "id": "openai",
+    "name": "Open AI API",
+    "icon": "openai.svg",
+    "url": "https://platform.openai.com/docs/api-reference/"
   },
   {
     "id": "php",

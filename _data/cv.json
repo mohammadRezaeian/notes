@@ -33,6 +33,7 @@
           "mongodb",
           "nestjs",
           "nodejs",
+          "openai",
           "postman",
           "python",
           "pytorch",
