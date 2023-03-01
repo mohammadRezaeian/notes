@@ -6,9 +6,12 @@
   {
     "name": "AI & Data",
     "list": [
+      "airflow",
       "detectron2",
+      "dialogflow",
       "huggingface",
       "jupyter",
+      "openai",
       "pytorch",
       "scikit-learn",
       "tensorflow",
@@ -47,7 +50,8 @@
       "mongodb",
       "mysql",
       "nestjs",
-      "nodejs"
+      "nodejs",
+      "vertex-ai"
     ]
   },
   {
@@ -67,7 +71,6 @@
       "openai",
       "postman",
       "sphinx",
-      "vertex-ai",
       "vscode"
     ]
   }
