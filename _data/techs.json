@@ -132,6 +132,12 @@
     "url": "https://huggingface.co/"
   },
   {
+    "id": "imgur",
+    "name": "Imgur API",
+    "icon": "imgur.svg",
+    "url": "https://apidocs.imgur.com/"
+  },
+  {
     "id": "jekyll",
     "name": "Jekyll",
     "icon": "jekyll.svg",
@@ -229,7 +235,7 @@
   },
   {
     "id": "openai",
-    "name": "Open AI API",
+    "name": "OpenAI API",
     "icon": "openai.svg",
     "url": "https://platform.openai.com/docs/api-reference/"
   },
