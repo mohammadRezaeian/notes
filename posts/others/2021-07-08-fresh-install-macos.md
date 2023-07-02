@@ -5,7 +5,7 @@ tags: [Others, Fresh Installation, MacOS, Collection]
 toc: true
 icon: macos.svg
 keywords: "install new macbook setting up applications command line zsh terminal nodejs python brew shortcut cask nodejs node zsh oh-my-zsh xcode bitwarden XCodes dark mode canon printer mg2900"
-date: 2023-01-02
+date: 2023-04-29
 ---
 
 This is my personal list of to-do things for a new Macbook.
@@ -135,7 +135,7 @@ For creating a gif, use GIPHY Capture (download from App Store).
 - ~~[Google Chrome](https://www.google.com/chrome/) and sign in to sync~~. **I'm using [Brave](https://brave.com/)** (chromium-based engine also)
   1. Disable Tab Hover Cards: navigate to `chrome://flags/`, search for "tab hover" and choose "Disable".
   2. Add a site to use cookies (enable third-party cookies for downloading files on Google Drive): Go to `chrome://settings/cookies` and then "Add" `drive.google.com` (tick on third-party...) in "Sites that can always use cookies" section.
-  3. **Custom keyboard shortcut**: System Preferences > Keyboard > Shortcuts > Application Shortcuts > "+" > Choose Brave > Type the name EXACTLY THE SAME as the name in menu (for example "Inspect elements") > Add a custom shortcut. **Remark**: it's not working with Chrome.
+  3. **Custom keyboard shortcut**: System Preferences > Keyboard > Shortcuts > Application Shortcuts > "+" > Choose Brave > Type the name EXACTLY THE SAME as the name in menu (for example "Inspect elements") > Add a custom shortcut. **Pro tip**: In order to find the name of the action, you can use Search Help (either click "Help" in the menu bar or press [[cmd]] + [[shift]] + [[/]])
   4. Use `defaults write com.google.Chrome NSRequiresAquaSystemAppearance -bool YES` to force Chrome to use light mode.
   5. **Cannot share screen with Chrome** (eg. in Google Meet): follow [this guide](https://apple.stackexchange.com/a/438636).
 - [iTerm2](https://iterm2.com/) (check more in other section). This is for a sticky terminal (after some configs). An alternative which is really beautiful is [Hyper](https://hyper.is/).
@@ -220,10 +220,10 @@ For creating a gif, use GIPHY Capture (download from App Store).
   echo $SHELL # should returns /bin/zsh
   # Check zsh version
   zsh --version
-
+  
   # install oh-my-zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
+  
   # install spaceship theme
   git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
   ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
@@ -233,7 +233,7 @@ For creating a gif, use GIPHY Capture (download from App Store).
   # Download (then open and install) font Source Code Pro:
   # https://github.com/powerline/fonts/blob/master/SourceCodePro/Source%20Code%20Pro%20for%20Powerline.otf
   # Open iTerm2 Preferences > Profile > Text > change font!
-
+  
   # If you wanna see the changes
   source ~/.zshrc
   ```

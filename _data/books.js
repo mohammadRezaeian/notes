@@ -12,6 +12,17 @@ module.exports = [
   //   "reading": true
   // },
   {
+    title: "The Fountainhead",
+    author: "Ayn Rand",
+    goodreads: "https://www.goodreads.com/book/show/2122.The_Fountainhead",
+    reading: true,
+  },
+  {
+    title: "Journey Under the Midnight Sun (Bạch Dạ Hành)",
+    author: "Keigo Higashino",
+    goodreads: "https://www.goodreads.com/review/show/4143691935",
+  },
+  {
     title: "11-Character Murder (Án Mạng Mười Một Chữ)",
     author: "Keigo Higashino",
     goodreads: "https://www.goodreads.com/book/show/52313928-n-m-ng-m-i-m-t-ch",
