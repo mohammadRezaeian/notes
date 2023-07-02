@@ -45,6 +45,7 @@ hideComment: true # Hide the comment section
 part: 2 # if this post has many parts
 basePartUrl: build-a-website-using-wordpress-and-gatsby # the base url of the path
 partname: "Setting up" # the name of the part
+hideLastModified: true # hide "Last Modified" in the header
 ```
 
 ## For blog posts
