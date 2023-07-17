@@ -12,7 +12,8 @@
     "color": "#e97c8e",
     "icon": "project.svg",
     "fontello": "icon-project",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
   },
   {
     "name": "MOOC",
@@ -20,123 +21,156 @@
     "icon": "mooc.svg",
     "fontello": "icon-mooc",
     "fontello-solid": "icon-mooc",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
+
   },
   {
     "name": "Machine Learning",
     "color": "#84f9ff",
     "icon": "ml.svg",
     "fontello": "icon-ml",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
+
   },
   {
     "name": "Data Science",
     "color": "#b5ffb5",
     "icon": "data-science.svg",
     "fontello": "icon-data",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
+
   },
   {
     "name": "Deep Learning",
     "color": "#fde193",
     "icon": "dl.svg",
     "fontello": "icon-dl",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
+
   },
   {
     "name": "Time Series",
     "color": "#81ecec",
     "icon": "ts.svg",
     "fontello": "icon-ts",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
+
   },
   {
     "name": "NLP",
     "color": "#eac1ea",
     "icon": "nlp.svg",
     "fontello": "icon-chatbot",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
+
   },
   {
     "name": "MLOps",
     "color": "#a0ffa0",
     "icon": "mlops.svg",
     "fontello": "icon-rocket",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
+
   },
   {
     "name": "Python",
     "color": "#a0ffa0",
     "icon": "python.svg",
     "fontello": "icon-python",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
+
   },
   {
     "name": "R Lang",
     "color": "#80beff",
     "icon": "r.svg",
     "fontello": "icon-r-lang",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
+
   },
   {
     "name": "Prob & Stats",
     "color": "#daff9f",
     "icon": "stats.svg",
     "fontello": "icon-stats",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
+
   },
   {
     "name": "Angular",
     "color": "#C31C2F",
     "icon": "ng.svg",
     "fontello": "icon-ng",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
+
   },
   {
     "name": "JavaScript",
     "icon": "js.svg",
     "fontello": "icon-js-solid",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
+
   },
   {
     "name": "Web Dev",
     "icon": "web-dev.svg",
     "fontello": "icon-web-dev",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
+
   },
   {
     "name": "API & Services",
     "icon": "api.svg",
     "fontello": "icon-api",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
+
   },
   {
     "name": "Algorithms",
     "icon": "algo.svg",
     "fontello": "icon-algo",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
+
   },
   {
     "name": "Skills",
     "color": "#fda798",
     "icon": "skills.svg",
     "fontello": "icon-skill",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
+
   },
   {
     "name": "Gaming & Puzzles",
     "color": "#fda798",
     "icon": "games.svg",
     "fontello": "icon-game",
-    "showInNoteToc": true
+    "showInNoteToc": true,
+    "hideFromTopics": true
+
   },
   {
     "name": "Others",
     "color": "#00cec9",
     "icon": "others.svg",
     "fontello": "icon-others-solid",
-    "showInNoteToc": true,
-    "hideFromTopics": true
+    "showInNoteToc": true
   },
   {
     "name": "11ty",
