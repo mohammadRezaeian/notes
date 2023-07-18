@@ -340,5 +340,65 @@
     "name": "Wordpress",
     "icon": "wordpress.svg",
     "url": "/tags/wordpress/"
+  },
+  {
+    "id": "c++",
+    "name": "C++",
+    "icon": "c++.svg"
+  },
+  {
+    "id": "qt",
+    "name": "Qt",
+    "icon": "qt.svg"
+  },
+  {
+    "id": "qml",
+    "name": "QML",
+    "icon": "qml.svg"
+  },
+  {
+    "id": "qt-creator",
+    "name": "qt-creator",
+    "icon": "qt-creator.svg"
+  },
+  {
+    "id": "crosstool-ng",
+    "name": "crosstool-ng",
+    "icon" :""
+  },
+  {
+    "id": "vscodium",
+    "name": "vscodium",
+    "icon" :"codium.svg"
+  },
+  {
+    "id": "kvm/qemu",
+    "name": "kvm/qemu",
+    "icon" :"qemu.svg"
+  },
+  {
+    "id": "podman",
+    "name": "podman",
+    "icon" :"podman.svg"
+  },
+  {
+    "id": "iptables",
+    "name": "iptables",
+    "icon" :"iptables.svg"
+  },
+  {
+    "id": "fedora",
+    "name": "fedora",
+    "icon" :"fedora.svg"
+  },
+  {
+    "id": "debian",
+    "name": "debian",
+    "icon" :"debian.svg"
+  },
+  {
+    "id": "centos",
+    "name": "centos",
+    "icon" :"centos.svg"
   }
 ]
