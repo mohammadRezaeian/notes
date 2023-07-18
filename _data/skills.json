@@ -1,6 +1,18 @@
 [
   {
     "name": "Languages",
-    "list": ["", "", "", "", "", ""]
+    "list": ["C/C++", "QML" , "Bash"]
+  },
+  {
+    "name": "Framework",
+    "list": ["Qt"]
+  },
+  {
+    "name": "Tools",
+    "list": ["Gnu/Linux",  "Bash", "Git", "Qt Creator", "Crosstool-NG", "Vscodium", "Kvm/QEMU" ,"Podman", "Docker", "IPtables"]
+  },
+  {
+    "name": "My Distributions",
+    "list": ["Fedora-SilverBlue", "Debian", "CentOS"]
   }
 ]
